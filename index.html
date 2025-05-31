@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Andino Águila Azul - 86 años promoviendo el montañismo en Chile</title>
+    <meta name="description" content="Club Andino Águila Azul, fundado en 1938. 86 años promoviendo deportes de montaña en Chile. Refugio Farellones, escalada, alta montaña, ski.">
+    <meta name="keywords" content="club andino, montañismo chile, refugio farellones, escalada, alta montaña, ski, snowboard">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Club Andino Águila Azul">
+    <meta property="og:description" content="86 años promoviendo el montañismo en Chile">
+    <meta property="og:image" content="https://fpenailillo.github.io/club_andino_aguila_azul/images/club-logo.jpg">
+    <meta property="og:url" content="https://fpenailillo.github.io/club_andino_aguila_azul">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2C3E50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Águila Azul">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio" class="logo">Club Andino Águila Azul</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#deportes">Actividades</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="socios.html" class="socios-access">Área de Socios</a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="mountain-silhouette"></div>
+            <div class="clouds-animation"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">🏆</span>
+                <span class="badge-text">86 Años de Tradición</span>
+            </div>
+            <h1>Club Andino Águila Azul</h1>
+            <p class="hero-subtitle">Desde 1938 promoviendo los deportes de montaña en Chile</p>
+            <p class="hero-description">Formación técnica, respeto por la naturaleza y compañerismo. ¡Únete a nuestra tradición andina!</p>
+            <div class="hero-actions">
+                <a href="#contacto" class="cta-button primary">
+                    <span class="btn-icon">🏄‍♂️</span>
+                    ¡Únete Ahora!
+                </a>
+                <a href="reservas.html" class="cta-button secondary">
+                    <span class="btn-icon">🏠</span>
+                    Reservar Refugio
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-number">64</span>
+                    <span class="stat-label">Socios</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">2400m</span>
+                    <span class="stat-label">Refugio</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Actividades</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Descubre más</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="64">0</div>
+                <div class="stat-label">Socios Activos</div>
+                <div class="stat-trend">↗️ +12% este año</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="86">0</div>
+                <div class="stat-label">Años de Historia</div>
+                <div class="stat-trend">🎆 Desde 1938</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="25">0</div>
+                <div class="stat-label">Salidas Anuales</div>
+                <div class="stat-trend">🗺️ Promedio mensual</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" data-target="2400">0</div>
+                <div class="stat-label">Metros de Altitud</div>
+                <div class="stat-trend">🏠 Refugio Farellones</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="about">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <p>Fundado en 1938 por un grupo de montañistas chilenos, el Club Andino Águila Azul ha sido durante más de 86 años un referente en el desarrollo de los deportes de montaña en Chile, promoviendo la formación técnica, el respeto por la naturaleza y el compañerismo entre los socios.</p>
+                
+                <p>Con sede social en Providencia, Santiago, y nuestro emblemático refugio en Farellones, ofrecemos un espacio donde cada montañista puede desarrollar sus habilidades técnicas y vivir experiencias únicas en la cordillera de los Andes.</p>
+                
+                <p>Nuestras actividades incluyen ascensiones a cerros emblemáticos como el Aconcagua, El Plomo, San Gabriel, expediciones técnicas, talleres de escalada en hielo, técnicas invernales, ski y snowboard. ¡Únete a nuestra tradición andina!</p>
+            </div>
+            <div class="about-image fade-in">
+                🦅
+            </div>
+        </div>
+    </section>
+
+    <section id="deportes" class="sports">
+        <div class="sports-container">
+            <h2 class="section-title" style="color: white;">Nuestras Actividades</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9); text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">Descubre la aventura que te espera en los Andes chilenos</p>
+            <div class="sports-grid">
+                <div class="sport-card fade-in">
+                    <div class="sport-icon">🏔️</div>
+                    <h3>Alta Montaña</h3>
+                    <p>Ascensiones técnicas a cerros emblemáticos como Aconcagua, El Plomo, San Gabriel y expediciones a la cara norte del cerro Punta Águila Azul.</p>
+                    <div class="sport-features">
+                        <span class="feature-tag">Técnico</span>
+                        <span class="feature-tag">6000m+</span>
+                    </div>
+                </div>
+                <div class="sport-card fade-in">
+                    <div class="sport-icon">🥾</div>
+                    <h3>Senderismo</h3>
+                    <p>Caminatas y trekkings para todos los niveles, desde principiantes hasta montañistas experimentados en la cordillera de los Andes.</p>
+                    <div class="sport-features">
+                        <span class="feature-tag">Todos los niveles</span>
+                        <span class="feature-tag">Naturaleza</span>
+                    </div>
+                </div>
+                <div class="sport-card fade-in">
+                    <div class="sport-icon">🧗</div>
+                    <h3>Escalada</h3>
+                    <p>Escalada en roca y hielo con talleres técnicos especializados. Sectores como La Leonera y técnicas de escalada deportiva.</p>
+                    <div class="sport-features">
+                        <span class="feature-tag">Roca & Hielo</span>
+                        <span class="feature-tag">Técnico</span>
+                    </div>
+                </div>
+                <div class="sport-card fade-in">
+                    <div class="sport-icon">⛷️</div>
+                    <h3>Ski & Snowboard</h3>
+                    <p>Escuela de ski y snowboard para niños y adultos. Actividades invernales en nuestro refugio de Farellones.</p>
+                    <div class="sport-features">
+                        <span class="feature-tag">Invierno</span>
+                        <span class="feature-tag">Refugio</span>
+                    </div>
+                </div>
+                <div class="sport-card fade-in">
+                    <div class="sport-icon">🏕️</div>
+                    <h3>Campamentos</h3>
+                    <p>Campamentos de verano e invierno que fomentan la convivencia y el desarrollo de habilidades en entornos naturales.</p>
+                    <div class="sport-features">
+                        <span class="feature-tag">Familiar</span>
+                        <span class="feature-tag">Educativo</span>
+                    </div>
+                </div>
+                <div class="sport-card fade-in">
+                    <div class="sport-icon">🎯</div>
+                    <h3>Formación Técnica</h3>
+                    <p>Talleres especializados en técnicas invernales, gestión del riesgo, primeros auxilios y seguridad en montaña.</p>
+                    <div class="sport-features">
+                        <span class="feature-tag">Certificación</span>
+                        <span class="feature-tag">Seguridad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+        <div class="gallery-container">
+            <h2 class="section-title">Galería Fotográfica</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                Revive nuestras aventuras en la cordillera de los Andes
+            </p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(0)">
+                    <img src="https://via.placeholder.com/400x400/2C3E50/FFFFFF?text=Aconcagua+2024" alt="Expedición Aconcagua" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Expedición Aconcagua</div>
+                        <div class="gallery-description">Ascenso al techo de América - Enero 2024</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(1)">
+                    <img src="https://via.placeholder.com/400x400/34495E/FFFFFF?text=Punta+Aguila+Azul" alt="Punta Águila Azul" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Punta Águila Azul - Cara Norte</div>
+                        <div class="gallery-description">Expedición técnica a nuestro cerro emblemático</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(2)">
+                    <img src="https://via.placeholder.com/400x400/5D6D7E/FFFFFF?text=Escalada+Hielo" alt="Escalada en Hielo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Taller Escalada en Hielo</div>
+                        <div class="gallery-description">Formación técnica en técnicas invernales</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(3)">
+                    <img src="https://via.placeholder.com/400x400/1B2631/FFFFFF?text=Ski+Farellones" alt="Ski en Farellones" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Escuela de Ski Niños</div>
+                        <div class="gallery-description">Temporada invernal en nuestro refugio</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(4)">
+                    <img src="https://via.placeholder.com/400x400/273746/FFFFFF?text=San+Gabriel" alt="Cerro San Gabriel" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Cerro San Gabriel</div>
+                        <div class="gallery-description">Ascensión grupal de invierno</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(5)">
+                    <img src="https://via.placeholder.com/400x400/2F4F4F/FFFFFF?text=Campamento+Verano" alt="Campamento de Verano" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Campamento de Verano</div>
+                        <div class="gallery-description">Convivencia y formación en la cordillera</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(6)">
+                    <img src="https://via.placeholder.com/400x400/4682B4/FFFFFF?text=Aniversario+86" alt="Aniversario 86 años" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Aniversario 86 Años</div>
+                        <div class="gallery-description">Celebración de nuestra rica historia</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(7)">
+                    <img src="https://via.placeholder.com/400x400/87CEEB/333333?text=Torres+del+Paine" alt="Torres del Paine" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Circuito W Torres del Paine</div>
+                        <div class="gallery-description">Travesía épica en la Patagonia</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(8)">
+                    <img src="https://via.placeholder.com/400x400/696969/FFFFFF?text=Refugio+Farellones" alt="Refugio Farellones" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Refugio Farellones</div>
+                        <div class="gallery-description">Nuestro hogar en la montaña</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://instagram.com/clubandinoaguilaazul" target="_blank" class="instagram-link">
+                    Ver más en Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para galería -->
+    <div id="photoModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <button class="modal-nav modal-prev" onclick="changePhoto(-1)">&#10094;</button>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <button class="modal-nav modal-next" onclick="changePhoto(1)">&#10095;</button>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <section id="noticias" class="news">
+        <div class="news-container">
+            <h2 class="section-title">Últimas Noticias</h2>
+            <div class="news-grid">
+                <article class="news-card fade-in">
+                    <div class="news-image">🏔️</div>
+                    <div class="news-content">
+                        <div class="news-date">Noviembre, 2024</div>
+                        <h3 class="news-title">Expedición Punta Águila Azul - Cara Norte</h3>
+                        <p class="news-excerpt">Exitosa expedición a la cara norte inexplorada de nuestro cerro emblemático, consolidando nuevas rutas técnicas para futuros montañistas.</p>
+                    </div>
+                </article>
+                <article class="news-card fade-in">
+                    <div class="news-image">🎿</div>
+                    <div class="news-content">
+                        <div class="news-date">Agosto, 2024</div>
+                        <h3 class="news-title">Escuela de Ski para Niños</h3>
+                        <p class="news-excerpt">Gran éxito de nuestra escuela de ski y snowboard para niños, promoviendo el amor por los deportes de invierno desde temprana edad.</p>
+                    </div>
+                </article>
+                <article class="news-card fade-in">
+                    <div class="news-image">🤝</div>
+                    <div class="news-content">
+                        <div class="news-date">Diciembre, 2024</div>
+                        <h3 class="news-title">Convenio con UMCE</h3>
+                        <p class="news-excerpt">Firmamos convenio de colaboración con la Universidad Metropolitana de Ciencias de la Educación, ampliando oportunidades educativas para nuestros socios.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Sede Social</h4>
+                            <p>Almirante Simpson 3, Depto. 102<br>Providencia, Santiago</p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">🏔️</div>
+                        <div>
+                            <h4>Refugio</h4>
+                            <p>Farellones, Cordillera de los Andes</p>
+                            <a href="reservas.html" style="color: #2C3E50; font-weight: bold;">🏠 Reservar ahora</a>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+56 9 8660 3885</p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Directorio@clubandinoaguilaazul.cl</p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@clubandinoaguilaazul</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="deporte">Actividad de Interés</label>
+                        <input type="text" id="deporte" name="deporte" placeholder="Alta montaña, senderismo, escalada, ski...">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos más sobre tu interés..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" title="Facebook">📘</a>
+                <a href="https://instagram.com/clubandinoaguilaazul" target="_blank" title="Instagram">📷</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="YouTube">📺</a>
+            </div>
+            <p>&copy; 2025 Club Andino Águila Azul. Todos los derechos reservados.</p>
+            <p>86 años promoviendo los deportes de montaña en Chile</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Service Worker para PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

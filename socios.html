@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Socios - Club Andino Águila Azul</title>
+    <meta name="description" content="Acceso exclusivo para socios del Club Andino Águila Azul. Reservas, actividades, información privilegiada.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2C3E50">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icons/favicon.svg">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            background: linear-gradient(180deg, 
+                #87CEEB 0%,
+                #4682B4 20%,
+                #2F4F4F 40%,
+                #696969 60%,
+                #2F2F2F 80%,
+                #1a1a1a 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(180deg, transparent 60%, rgba(47,79,79,0.6) 65%, rgba(47,79,79,0.8) 100%),
+                linear-gradient(180deg, transparent 70%, rgba(105,105,105,0.7) 75%, rgba(105,105,105,0.9) 100%),
+                linear-gradient(180deg, transparent 80%, rgba(47,47,47,0.8) 85%, rgba(26,26,26,1) 100%);
+            animation: mountainBreathe 15s ease-in-out infinite;
+        }
+
+        .login-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .login-title {
+            font-size: 1.8rem;
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .login-subtitle {
+            color: #5D6D7E;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #2C3E50, #34495E);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(44,62,80,0.4);
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .forgot-password a {
+            color: #5D6D7E;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #2C3E50;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            z-index: 20;
+        }
+
+        .back-home:hover {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        .dashboard {
+            display: none;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #F8F9FA 0%, #E8F4FD 100%);
+        }
+
+        .dashboard-header {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logout-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .dashboard-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .welcome-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .dashboard-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #2C3E50;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-description {
+            color: #5D6D7E;
+            margin-bottom: 1rem;
+        }
+
+        .card-action {
+            background: linear-gradient(45deg, #2C3E50, #34495E);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .card-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44,62,80,0.3);
+        }
+
+        .activities-list {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .activities-header {
+            background: linear-gradient(45deg, #2C3E50, #34495E);
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .activity-item {
+            padding: 1.5rem;
+            border-bottom: 1px solid #E8F4FD;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .activity-item:hover {
+            background: #F8F9FA;
+        }
+
+        .activity-info h4 {
+            color: #2C3E50;
+            margin-bottom: 0.3rem;
+        }
+
+        .activity-info p {
+            color: #5D6D7E;
+            font-size: 0.9rem;
+        }
+
+        .activity-status {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .status-confirmed {
+            background: #D5EDDA;
+            color: #155724;
+        }
+
+        .status-pending {
+            background: #FFF3CD;
+            color: #856404;
+        }
+
+        .status-available {
+            background: #CCE7FF;
+            color: #004085;
+        }
+
+        @media (max-width: 768px) {
+            .login-box {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .back-home {
+                top: 20px;
+                left: 20px;
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .dashboard-nav {
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .dashboard-content {
+                padding: 2rem 1rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .activity-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="loginSection" class="login-container">
+        <a href="index.html" class="back-home">← Volver a Inicio</a>
+        
+        <div class="login-box">
+            <div class="login-header">
+                <div class="login-logo">🏔️</div>
+                <h2 class="login-title">Área de Socios</h2>
+                <p class="login-subtitle">Club Andino Águila Azul</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email o RUN</label>
+                    <input type="text" id="email" name="email" required placeholder="Ingresa tu email o RUN">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
+                </div>
+                
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+            </form>
+            
+            <div class="forgot-password">
+                <a href="#" onclick="forgotPassword()">¿Olvidaste tu contraseña?</a>
+            </div>
+            
+            <div style="margin-top: 2rem; padding: 1rem; background: #e3f2fd; border-radius: 10px; font-size: 0.9rem;">
+                <strong>🔐 Demo - Credenciales de prueba:</strong><br>
+                <strong>Socio:</strong> socio@aguilaazul.cl / montana2025<br>
+                <strong>Directorio:</strong> directorio@aguilaazul.cl / directorio2025
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboardSection" class="dashboard">
+        <header class="dashboard-header">
+            <nav class="dashboard-nav">
+                <div class="dashboard-logo">
+                    🏔️ Club Andino Águila Azul - Área Socios
+                </div>
+                <div class="user-info">
+                    <span id="userName">Bienvenido, Socio</span>
+                    <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="welcome-section">
+                <h2>Bienvenido al Área de Socios</h2>
+                <p>Accede a información exclusiva, inscríbete en actividades y mantente conectado con nuestra comunidad montañera.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <span class="card-icon">📅</span>
+                    <h3 class="card-title">Calendario de Actividades</h3>
+                    <p class="card-description">Ver próximas salidas, talleres y eventos programados.</p>
+                    <button class="card-action" onclick="showCalendar()">Ver Calendario</button>
+                </div>
+
+                <div class="dashboard-card">
+                    <span class="card-icon">📝</span>
+                    <h3 class="card-title">Inscripción a Actividades</h3>
+                    <p class="card-description">Inscríbete en las próximas expediciones y talleres.</p>
+                    <button class="card-action" onclick="showRegistration()">Inscribirse</button>
+                </div>
+
+                <div class="dashboard-card">
+                    <span class="card-icon">💰</span>
+                    <h3 class="card-title">Estado de Cuotas</h3>
+                    <p class="card-description">Revisa el estado de tus pagos y cuotas sociales.</p>
+                    <button class="card-action" onclick="showPayments()">Ver Estado</button>
+                </div>
+
+                <div class="dashboard-card">
+                    <span class="card-icon">🏠</span>
+                    <h3 class="card-title">Reserva Refugio</h3>
+                    <p class="card-description">Reserva fechas en nuestro refugio de Farellones.</p>
+                    <button class="card-action" onclick="goToReservations()">Reservar</button>
+                </div>
+
+                <div class="dashboard-card">
+                    <span class="card-icon">📚</span>
+                    <h3 class="card-title">Biblioteca Digital</h3>
+                    <p class="card-description">Accede a manuales técnicos y material educativo.</p>
+                    <button class="card-action" onclick="showLibrary()">Explorar</button>
+                </div>
+
+                <div class="dashboard-card">
+                    <span class="card-icon">👥</span>
+                    <h3 class="card-title">Directorio de Socios</h3>
+                    <p class="card-description">Contacta con otros miembros del club.</p>
+                    <button class="card-action" onclick="showDirectory()">Ver Directorio</button>
+                </div>
+            </div>
+
+            <div class="activities-list" style="margin-top: 2rem;">
+                <div class="activities-header">
+                    Mis Próximas Actividades
+                </div>
+                <div class="activity-item">
+                    <div class="activity-info">
+                        <h4>Taller de Técnicas Invernales</h4>
+                        <p>15 de Junio, 2025 - 09:00 hrs - Refugio Farellones</p>
+                    </div>
+                    <span class="activity-status status-confirmed">Confirmado</span>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-info">
+                        <h4>Ascensión Cerro El Plomo</h4>
+                        <p>22 de Junio, 2025 - 06:00 hrs - Base Refugio Lo Valdés</p>
+                    </div>
+                    <span class="activity-status status-pending">Pendiente</span>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-info">
+                        <h4>Campamento de Invierno</h4>
+                        <p>5-7 de Julio, 2025 - Weekend completo</p>
+                    </div>
+                    <span class="activity-status status-available">Disponible</span>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-info">
+                        <h4>Taller de Escalada en Roca</h4>
+                        <p>12 de Julio, 2025 - 08:30 hrs - Sector La Leonera</p>
+                    </div>
+                    <span class="activity-status status-available">Disponible</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // === FUNCIONALIDAD DE LOGIN ===
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Demo credentials - En producción esto sería una API real
+            if ((email === 'socio@aguilaazul.cl' || email === '12345678-9') && password === 'montana2025') {
+                login('Socio Activo');
+            } else if ((email === 'directorio@aguilaazul.cl' || email === 'gerald.gatica') && password === 'directorio2025') {
+                login('Gerald Gatica - Presidente');
+            } else {
+                alert('Credenciales incorrectas. Intenta con:\n\nSocio: socio@aguilaazul.cl / montana2025\nDirectorio: directorio@aguilaazul.cl / directorio2025');
+            }
+        });
+
+        function login(userName) {
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('dashboardSection').style.display = 'block';
+            document.getElementById('userName').textContent = `Bienvenido, ${userName}`;
+            
+            // Simular carga de datos del usuario
+            loadUserData();
+        }
+
+        function logout() {
+            document.getElementById('loginSection').style.display = 'flex';
+            document.getElementById('dashboardSection').style.display = 'none';
+            document.getElementById('loginForm').reset();
+        }
+
+        function forgotPassword() {
+            alert('Se ha enviado un enlace de recuperación a tu email registrado.\n\nSi no tienes acceso a tu email, contacta al directorio:\nDirectorio@clubandinoaguilaazul.cl');
+        }
+
+        function loadUserData() {
+            console.log('Cargando datos del usuario...');
+        }
+
+        // === FUNCIONES DEL DASHBOARD ===
+        function showCalendar() {
+            alert('Función en desarrollo: Calendario de Actividades\n\nPróximamente podrás ver todas las actividades programadas con fechas, horarios y requisitos.');
+        }
+
+        function showRegistration() {
+            alert('Función en desarrollo: Inscripción a Actividades\n\nPróximamente podrás inscribirte directamente a salidas y talleres desde aquí.');
+        }
+
+        function showPayments() {
+            alert('Estado de Cuotas - Demo\n\n✅ Cuota Enero 2025: Pagada\n✅ Cuota Febrero 2025: Pagada\n🟡 Cuota Marzo 2025: Pendiente\n\nMonto pendiente: $25.000');
+        }
+
+        function goToReservations() {
+            window.location.href = 'reservas.html';
+        }
+
+        function showLibrary() {
+            alert('Biblioteca Digital - Demo\n\n📚 Disponible:\n- Manual de Seguridad en Montaña\n- Técnicas de Escalada en Hielo\n- Guía de Primeros Auxilios\n- Historia del Club (86 años)');
+        }
+
+        function showDirectory() {
+            alert('Función en desarrollo: Directorio de Socios\n\nPróximamente podrás contactar con otros socios y ver sus especialidades montañeras.');
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('dashboardSection').style.display === 'block') {
+                logout();
+            }
+        });
+    </script>
+</body>
+</html>

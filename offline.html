@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin conexión - Club Andino Águila Azul</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, 
+                #87CEEB 0%,
+                #4682B4 20%,
+                #2F4F4F 40%,
+                #696969 60%,
+                #2F2F2F 80%,
+                #1a1a1a 100%
+            );
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .mountain-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mountain-icon">🏔️</div>
+        <h1>Sin conexión</h1>
+        <p>No pudimos conectarnos a internet. Por favor, verifica tu conexión y vuelve a intentarlo.</p>
+        <p>Algunas funciones del sitio web del Club Andino Águila Azul están disponibles sin conexión, pero para acceder a todas las características, necesitas estar conectado.</p>
+        <a href="/" class="back-btn">Volver a intentar</a>
+    </div>
+</body>
+</html>

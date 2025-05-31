@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fondo circular azul montaña -->
+  <circle cx="256" cy="256" r="256" fill="#2C3E50"/>
+  
+  <!-- Montañas -->
+  <path d="M0 400 L120 200 L240 350 L360 150 L480 300 L512 320 L512 512 L0 512 Z" fill="#34495E"/>
+  <path d="M0 420 L80 250 L180 380 L280 180 L380 320 L480 280 L512 300 L512 512 L0 512 Z" fill="#5D6D7E"/>
+  
+  <!-- Pico principal (Águila Azul) -->
+  <path d="M200 400 L256 120 L312 400 Z" fill="#1B2631"/>
+  <path d="M220 380 L256 140 L292 380 Z" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Águila estilizada -->
+  <circle cx="256" cy="200" r="8" fill="#FFFFFF"/>
+  <path d="M240 190 Q256 185 272 190 Q268 200 256 205 Q244 200 240 190" fill="#FFFFFF"/>
+  <path d="M235 195 Q245 190 255 195" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M257 195 Q267 190 277 195" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- Texto CAAA -->
+  <text x="256" y="350" text-anchor="middle" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="48" font-weight="bold">CAAA</text>
+  <text x="256" y="390" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24">1938</text>
+  
+  <!-- Borde sutil -->
+  <circle cx="256" cy="256" r="250" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.2"/>
+</svg>

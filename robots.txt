@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://fpenailillo.github.io/club_andino_aguila_azul/sitemap.xml
+
+# Páginas principales
+Allow: /index.html
+Allow: /socios.html
+Allow: /reservas.html
+
+# Recursos
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /icons/
+
+# Archivos especiales
+Allow: /manifest.json
+Allow: /robots.txt
+Allow: /sitemap.xml
+
+# Disallow admin areas (futuro)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_*
+
+# Crawl-delay
+Crawl-delay: 1

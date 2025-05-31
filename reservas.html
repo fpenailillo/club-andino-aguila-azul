@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Refugio Farellones | Club Andino Águila Azul</title>
+    <meta name="description" content="Reserva tu estadía en el Refugio Farellones del Club Andino Águila Azul. Sistema de reservas online para socios y visitantes.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reservas Refugio Farellones - Club Andino Águila Azul">
+    <meta property="og:description" content="Reserva tu estadía en nuestro refugio de montaña a 2.400 msnm">
+    <meta property="og:image" content="https://fpenailillo.github.io/club_andino_aguila_azul/images/refugio-farellones.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reservas.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2C3E50">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Club Andino Águila Azul</a>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#deportes">Actividades</a></li>
+                <li><a href="index.html#galeria">Galería</a></li>
+                <li><a href="index.html#noticias">Noticias</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <a href="socios.html" class="socios-access">Área de Socios</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="reservas-hero">
+        <div class="hero-content">
+            <h1>🏔️ Refugio Farellones</h1>
+            <p class="hero-subtitle">Reserva tu estadía en la cordillera</p>
+            <div class="refugio-info">
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <span>2.400 msnm - Farellones</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🛏️</span>
+                    <span>Hasta 20 personas</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🏠</span>
+                    <span>Equipamiento completo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sistema de Reservas -->
+    <section class="reservas-system">
+        <div class="container">
+            <div class="reservas-grid">
+                
+                <!-- Panel de Calendario -->
+                <div class="calendar-panel">
+                    <div class="panel-header">
+                        <h2>📅 Disponibilidad</h2>
+                        <div class="calendar-controls">
+                            <button class="calendar-nav" onclick="changeMonth(-1)">❮</button>
+                            <span class="current-month" id="currentMonth">Mayo 2025</span>
+                            <button class="calendar-nav" onclick="changeMonth(1)">❯</button>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <span class="legend-color available"></span>
+                            <span>Disponible</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color reserved"></span>
+                            <span>Reservado</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color selected"></span>
+                            <span>Seleccionado</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color maintenance"></span>
+                            <span>Mantenimiento</span>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <div class="day-name">Dom</div>
+                            <div class="day-name">Lun</div>
+                            <div class="day-name">Mar</div>
+                            <div class="day-name">Mié</div>
+                            <div class="day-name">Jue</div>
+                            <div class="day-name">Vie</div>
+                            <div class="day-name">Sáb</div>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Los días se generan dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel de Reserva -->
+                <div class="booking-panel">
+                    <div class="panel-header">
+                        <h2>🏕️ Nueva Reserva</h2>
+                    </div>
+                    
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-section">
+                            <h3>📋 Información de la Reserva</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkIn">Fecha de Llegada</label>
+                                    <input type="date" id="checkIn" name="checkIn" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkOut">Fecha de Salida</label>
+                                    <input type="date" id="checkOut" name="checkOut" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guests">Número de Personas</label>
+                                    <select id="guests" name="guests" required>
+                                        <option value="">Seleccionar...</option>
+                                        <option value="1">1 persona</option>
+                                        <option value="2">2 personas</option>
+                                        <option value="3">3 personas</option>
+                                        <option value="4">4 personas</option>
+                                        <option value="5">5 personas</option>
+                                        <option value="6">6 personas</option>
+                                        <option value="7">7 personas</option>
+                                        <option value="8">8 personas</option>
+                                        <option value="9">9 personas</option>
+                                        <option value="10">10 personas</option>
+                                        <option value="11">11 personas</option>
+                                        <option value="12">12 personas</option>
+                                        <option value="13">13 personas</option>
+                                        <option value="14">14 personas</option>
+                                        <option value="15">15 personas</option>
+                                        <option value="16">16 personas</option>
+                                        <option value="17">17 personas</option>
+                                        <option value="18">18 personas</option>
+                                        <option value="19">19 personas</option>
+                                        <option value="20">20 personas</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="userType">Tipo de Usuario</label>
+                                    <select id="userType" name="userType" required onchange="updatePricing()">
+                                        <option value="">Seleccionar...</option>
+                                        <option value="socio">Socio del Club</option>
+                                        <option value="visitante">Visitante</option>
+                                        <option value="grupo_estudiantil">Grupo Estudiantil</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>👤 Datos del Responsable</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nombre Completo</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rut">RUT</label>
+                                    <input type="text" id="rut" name="rut" placeholder="12.345.678-9" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+56 9 1234 5678" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emergency_contact">Contacto de Emergencia</label>
+                                <input type="text" id="emergency_contact" name="emergency_contact" placeholder="Nombre y teléfono" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>🎯 Detalles de la Actividad</h3>
+                            
+                            <div class="form-group">
+                                <label for="activity_type">Tipo de Actividad</label>
+                                <select id="activity_type" name="activity_type" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="alta_montana">Alta Montaña</option>
+                                    <option value="senderismo">Senderismo</option>
+                                    <option value="escalada">Escalada</option>
+                                    <option value="ski_snowboard">Ski/Snowboard</option>
+                                    <option value="entrenamiento">Entrenamiento</option>
+                                    <option value="descanso">Descanso/Recreación</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="special_requests">Solicitudes Especiales</label>
+                                <textarea id="special_requests" name="special_requests" rows="3" placeholder="Equipamiento adicional, necesidades especiales, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Resumen de Costos -->
+                        <div class="cost-summary" id="costSummary" style="display: none;">
+                            <h3>💰 Resumen de Costos</h3>
+                            <div class="cost-breakdown">
+                                <div class="cost-item">
+                                    <span>Noches:</span>
+                                    <span id="nightsCount">-</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Tarifa por noche:</span>
+                                    <span id="nightly_rate">-</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Personas:</span>
+                                    <span id="guestsCount">-</span>
+                                </div>
+                                <div class="cost-item subtotal">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal">-</span>
+                                </div>
+                                <div class="cost-item total">
+                                    <span>Total:</span>
+                                    <span id="totalCost">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="resetForm()">Limpiar</button>
+                            <button type="submit" class="btn-primary">Solicitar Reserva</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información del Refugio -->
+    <section class="refugio-info-section">
+        <div class="container">
+            <h2 class="section-title">🏠 Sobre el Refugio</h2>
+            
+            <div class="refugio-features">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛏️</div>
+                        <h3>Alojamiento</h3>
+                        <p>Literas para 20 personas distribuidas en diferentes habitaciones. Ropa de cama incluida.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🍳</div>
+                        <h3>Cocina Equipada</h3>
+                        <p>Cocina completa con gas, refrigerador, utensilios y vajilla para grupos grandes.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔥</div>
+                        <h3>Calefacción</h3>
+                        <p>Estufa a leña y calefacción central para mantener el refugio cálido en invierno.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🚿</div>
+                        <h3>Baños</h3>
+                        <p>Baños completos con agua caliente y duchas. Mantenimiento diario incluido.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📡</div>
+                        <h3>Conectividad</h3>
+                        <p>WiFi básico disponible y señal de celular. Radio de emergencia.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎿</div>
+                        <h3>Equipamiento</h3>
+                        <p>Acceso directo a pistas de ski, sectores de escalada y rutas de alta montaña.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="refugio-rules">
+                <h3>📋 Normas del Refugio</h3>
+                <div class="rules-grid">
+                    <div class="rule-item">
+                        <span class="rule-icon">🕐</span>
+                        <span>Check-in: 15:00 hrs | Check-out: 11:00 hrs</span>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">🚭</span>
+                        <span>Prohibido fumar en el interior</span>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">🐕</span>
+                        <span>Mascotas permitidas con autorización previa</span>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">🔊</span>
+                        <span>Respeto por el descanso (silencio 22:00-07:00)</span>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">♻️</span>
+                        <span>Obligatorio separar residuos</span>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">🧽</span>
+                        <span>Dejar el refugio limpio al partir</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">❓ Preguntas Frecuentes</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Cómo llegar al refugio?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El refugio está ubicado en Farellones, a 2.400 msnm. Se puede llegar en vehículo propio por la carretera a Farellones (cadenas obligatorias en invierno) o en transporte público hasta el pueblo y luego caminar 15 minutos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Qué debo traer?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ropa de montaña adecuada, sleeping (la ropa de cama está incluida), artículos de higiene personal, comida y bebidas. El refugio cuenta con cocina equipada pero no incluye alimentación.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Cuál es la política de cancelación?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cancelaciones con 7 días de anticipación: 100% reembolso. 3-6 días: 50% reembolso. Menos de 3 días: sin reembolso, excepto por condiciones climáticas extremas o emergencias médicas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Hay descuentos para socios?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, los socios del club tienen tarifas preferenciales. Grupos estudiantiles y organizaciones de montañismo también pueden acceder a descuentos especiales.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Qué pasa si hay mal tiempo?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El refugio está preparado para condiciones invernales extremas. En caso de alerta roja meteorológica, se puede reprogramar la reserva sin costo adicional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contacto Reservas</h4>
+                <p>📞 +56 9 8660 3885</p>
+                <p>✉️ reservas@clubandinoaguilaazul.cl</p>
+                <p>🕐 Lun-Vie 9:00-18:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Ubicación</h4>
+                <p>📍 Refugio Farellones</p>
+                <p>🏔️ 2.400 msnm</p>
+                <p>🗺️ Región Metropolitana</p>
+            </div>
+            <div class="footer-section">
+                <h4>Emergencias</h4>
+                <p>🚨 Emergencia: 133</p>
+                <p>🏥 Rescue: +56 2 2345 6789</p>
+                <p>📡 Radio Club: Canal 14</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Club Andino Águila Azul. Todos los derechos reservados.</p>
+            <p><a href="index.html">← Volver al sitio principal</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/reservas.js"></script>
+</body>
+</html>
