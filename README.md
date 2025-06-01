@@ -136,7 +136,7 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 
 ### 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
+Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles. aqui
 
 ### 🏆 Reconocimientos
 
