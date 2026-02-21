@@ -48,7 +48,7 @@ Sitio web moderno y responsive para el Club Andino Águila Azul, con 86 años pr
 
 ```
 club-andino-aguila-azul/
-├── 📄 index.html              # Página principal
+├── 📄 index.html              # Página principal (GitHub Pages)
 ├── 📄 reservas.html           # Sistema de reservas
 ├── 📄 socios.html             # Área de socios
 ├── css/
@@ -60,8 +60,38 @@ club-andino-aguila-azul/
 ├── icons/                     # Iconos para PWA
 ├── 📄 manifest.json           # Configuración PWA
 ├── 📄 sw.js                   # Service Worker
-└── 📄 README.md               # Documentación
+├── 📄 README.md               # Documentación
+└── sistema-contable/          # Sistema contable (Next.js 15)
+    ├── app/                   # App Router
+    │   ├── (auth)/            # Páginas autenticadas
+    │   │   ├── dashboard/     # Panel principal con métricas
+    │   │   ├── ingresos/      # Gestión de ingresos
+    │   │   ├── egresos/       # Gestión de egresos
+    │   │   ├── socios/        # Gestión de socios
+    │   │   └── reportes/      # Reportes exportables
+    │   └── api/               # API Routes
+    ├── lib/
+    │   ├── reglas-negocio.ts  # Reglas de negocio críticas
+    │   └── services/          # Servicios de datos
+    └── prisma/                # Schema y seed de BD
 ```
+
+## Sistema Contable
+
+Ver [sistema-contable/README.md](sistema-contable/README.md) para documentación completa.
+
+**Inicio rápido del sistema contable:**
+```bash
+cd sistema-contable
+npm install
+cp .env.example .env
+# Configurar DATABASE_URL en .env
+npx prisma migrate dev --name init
+npm run db:seed
+npm run dev
+```
+
+Credenciales por defecto: `admin@club.cl` / `cambiar_en_produccion`
 
 ### 🎯 Características Destacadas
 

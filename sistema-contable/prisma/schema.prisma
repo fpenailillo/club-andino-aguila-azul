@@ -1,0 +1,169 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// SOCIOS
+// ============================================================================
+
+model Socio {
+  id             Int         @id @default(autoincrement())
+  nombre         String
+  apellido       String?
+  nombreCompleto String      @map("nombre_completo")
+  email          String?     @unique
+  telefono       String?
+  rut            String?     @unique
+  estado         EstadoSocio @default(ACTIVO)
+  fechaIngreso   DateTime    @default(now()) @map("fecha_ingreso")
+  notas          String?     @db.Text
+
+  movimientos Movimiento[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([nombreCompleto])
+  @@index([email])
+  @@index([estado])
+  @@map("socios")
+}
+
+enum EstadoSocio {
+  ACTIVO
+  INACTIVO
+  SUSPENDIDO
+  MOROSO
+}
+
+// ============================================================================
+// CONCEPTOS
+// ============================================================================
+
+model Concepto {
+  id          Int            @id @default(autoincrement())
+  nombre      String         @unique
+  tipo        TipoMovimiento
+  descripcion String?        @db.Text
+  activo      Boolean        @default(true)
+
+  movimientos Movimiento[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([tipo])
+  @@index([activo])
+  @@map("conceptos")
+}
+
+// ============================================================================
+// CENTROS DE COSTO
+// ============================================================================
+
+model Centro {
+  id          Int     @id @default(autoincrement())
+  nombre      String  @unique
+  descripcion String? @db.Text
+  activo      Boolean @default(true)
+
+  movimientos Movimiento[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([activo])
+  @@map("centros")
+}
+
+// ============================================================================
+// MOVIMIENTOS (Ingresos y Egresos)
+// ============================================================================
+
+model Movimiento {
+  id             Int            @id @default(autoincrement())
+  numeroRegistro String         @unique @map("numero_registro")
+  tipo           TipoMovimiento
+
+  socioId Int?   @map("socio_id")
+  socio   Socio? @relation(fields: [socioId], references: [id])
+
+  conceptoId Int      @map("concepto_id")
+  concepto   Concepto @relation(fields: [conceptoId], references: [id])
+
+  centroId Int    @map("centro_id")
+  centro   Centro @relation(fields: [centroId], references: [id])
+
+  comentario     String  @db.Text
+  monto          Decimal @db.Decimal(12, 2)
+  fecha          DateTime
+
+  esSinSocio     Boolean @default(false) @map("es_sin_socio")
+  motivoSinSocio String? @map("motivo_sin_socio")
+
+  creadoPor     String? @map("creado_por")
+  modificadoPor String? @map("modificado_por")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([tipo])
+  @@index([socioId])
+  @@index([conceptoId])
+  @@index([centroId])
+  @@index([fecha])
+  @@index([numeroRegistro])
+  @@index([esSinSocio])
+  @@map("movimientos")
+}
+
+enum TipoMovimiento {
+  INGRESO
+  EGRESO
+}
+
+// ============================================================================
+// USUARIOS DEL SISTEMA
+// ============================================================================
+
+model Usuario {
+  id           Int        @id @default(autoincrement())
+  email        String     @unique
+  nombre       String
+  passwordHash String     @map("password_hash")
+  rol          RolUsuario @default(USUARIO)
+  activo       Boolean    @default(true)
+
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  lastLogin DateTime? @map("last_login")
+
+  @@index([email])
+  @@index([activo])
+  @@map("usuarios")
+}
+
+enum RolUsuario {
+  ADMIN
+  TESORERO
+  USUARIO
+}
+
+// ============================================================================
+// CONTADOR DE REGISTROS (para números de registro únicos)
+// ============================================================================
+
+model ContadorRegistro {
+  id     Int            @id @default(autoincrement())
+  tipo   TipoMovimiento @unique
+  ultimo Int            @default(0)
+
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("contadores_registro")
+}
