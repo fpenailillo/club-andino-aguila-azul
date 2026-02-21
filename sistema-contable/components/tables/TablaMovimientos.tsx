@@ -65,7 +65,6 @@ interface FiltrosTabla {
 interface TablaMovimientosProps {
   filtros?: FiltrosTabla;
   onMovimientoClick?: (movimiento: Movimiento) => void;
-  onRefresh?: () => void;
   refreshKey?: number;
 }
 

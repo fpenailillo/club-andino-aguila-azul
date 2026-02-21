@@ -79,6 +79,8 @@ sistema-contable/
 │   ├── prisma.ts
 │   ├── auth.ts
 │   └── services/
+├── types/
+│   └── next-auth.d.ts      # Extensión de tipos de sesión
 └── prisma/
     ├── schema.prisma
     └── seed.ts
@@ -91,6 +93,6 @@ sistema-contable/
 1. Crear BD en [Railway](https://railway.app) o [Supabase](https://supabase.com)
 2. Configurar variables de entorno en Vercel:
    - `DATABASE_URL`
-   - `NEXTAUTH_SECRET`
-   - `NEXTAUTH_URL`
+   - `AUTH_SECRET` (generado con `openssl rand -base64 32`)
+   - `AUTH_URL` (ej: `https://tu-app.vercel.app`)
 3. `vercel --prod`

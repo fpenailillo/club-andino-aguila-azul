@@ -1,9 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import {
-  buscarSocio,
-  buscarSociosCandidatos,
-  normalizarNombre,
-} from "@/lib/reglas-negocio";
+import { buscarSociosCandidatos } from "@/lib/reglas-negocio";
 import { z } from "zod";
 import { Prisma } from "@prisma/client";
 

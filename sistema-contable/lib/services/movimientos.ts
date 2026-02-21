@@ -263,7 +263,7 @@ export async function obtenerMovimientoPorId(id: number) {
 
 export async function actualizarMovimiento(
   id: number,
-  data: Partial<CrearMovimientoInput>
+  data: Partial<CrearMovimientoInput> & { modificadoPor?: string }
 ) {
   const existente = await prisma.movimiento.findUnique({
     where: { id },
@@ -289,7 +289,7 @@ export async function actualizarMovimiento(
     updateData.fecha = fecha;
   }
 
-  if (data.modificadoPor) updateData.modificadoPor = data.modificadoPor as string;
+  if (data.modificadoPor) updateData.modificadoPor = data.modificadoPor;
 
   return prisma.movimiento.update({
     where: { id },

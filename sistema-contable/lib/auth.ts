@@ -50,14 +50,16 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        // user.role está definido en types/next-auth.d.ts
         token.role = (user as { role: string }).role;
       }
       return token;
     },
     async session({ session, token }) {
       if (token) {
+        // session.user tipado en types/next-auth.d.ts
         session.user.id = token.sub ?? "";
-        (session.user as { role?: string }).role = token.role as string;
+        session.user.role = (token.role as string) ?? "USUARIO";
       }
       return session;
     },

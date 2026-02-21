@@ -258,7 +258,6 @@ export function MovimientoForm({ tipo, onSuccess, onCancel }: MovimientoFormProp
       toast({
         title: "Movimiento registrado",
         description: `N° Registro: ${result.numeroRegistro}`,
-        variant: "success" as "default",
       });
 
       reset({ fecha: hoy, socioId: null });
