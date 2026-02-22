@@ -289,17 +289,31 @@ export function validarSocioRequerido(
 // REGLA #5: GENERACIÓN DE NÚMEROS DE REGISTRO
 // ============================================================================
 
+const PREFIJOS_TIPO = {
+  INGRESO: "ING",
+  EGRESO: "EGR",
+  CARGO: "CAR",
+  ABONO: "ABO",
+} as const;
+
 /**
  * Genera un número de registro formateado.
- * Formato: "ING-00019632" o "EGR-00003421"
+ * Formatos: "ING-00019632", "EGR-00003421", "CAR-00001234", "ABO-00000567"
  */
 export function generarNumeroRegistro(
-  tipo: "INGRESO" | "EGRESO",
+  tipo: "INGRESO" | "EGRESO" | "CARGO" | "ABONO",
   numero: number
 ): string {
-  const prefijo = tipo === "INGRESO" ? "ING" : "EGR";
+  const prefijo = PREFIJOS_TIPO[tipo];
   const numPadded = numero.toString().padStart(8, "0");
   return `${prefijo}-${numPadded}`;
+}
+
+/**
+ * Los CARGO y ABONO siempre deben asignarse a un socio.
+ */
+export function tipoRequiereSocio(tipo: "INGRESO" | "EGRESO" | "CARGO" | "ABONO"): boolean {
+  return tipo === "CARGO" || tipo === "ABONO";
 }
 
 // ============================================================================

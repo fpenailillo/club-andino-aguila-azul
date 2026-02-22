@@ -21,7 +21,7 @@ import {
 interface Movimiento {
   id: number;
   numeroRegistro: string;
-  tipo: "INGRESO" | "EGRESO";
+  tipo: "INGRESO" | "EGRESO" | "CARGO" | "ABONO";
   fecha: string;
   monto: string | number;
   comentario: string;
@@ -35,9 +35,14 @@ interface Movimiento {
 interface Totales {
   ingresos: number;
   egresos: number;
+  cargos: number;
+  abonos: number;
   balance: number;
+  saldoCuenta: number;
   cantidadIngresos: number;
   cantidadEgresos: number;
+  cantidadCargos: number;
+  cantidadAbonos: number;
 }
 
 interface RespuestaMovimientos {
@@ -50,7 +55,7 @@ interface RespuestaMovimientos {
 }
 
 interface FiltrosTabla {
-  tipo?: "INGRESO" | "EGRESO";
+  tipo?: "INGRESO" | "EGRESO" | "CARGO" | "ABONO";
   conceptoId?: number;
   centroId?: number;
   fechaDesde?: string;
@@ -240,7 +245,11 @@ export function TablaMovimientos({
                       {formatFecha(mov.fecha)}
                     </td>
                     <td className="px-4 py-3">
-                      <Badge variant={mov.tipo === "INGRESO" ? "success" : "destructive"}>
+                      <Badge variant={
+                        mov.tipo === "INGRESO" ? "success" :
+                        mov.tipo === "EGRESO" ? "destructive" :
+                        mov.tipo === "ABONO" ? "secondary" : "warning"
+                      }>
                         {mov.tipo}
                       </Badge>
                     </td>
@@ -249,8 +258,10 @@ export function TablaMovimientos({
                     <td className="px-4 py-3">
                       <Badge variant="outline">{mov.centro.nombre}</Badge>
                     </td>
-                    <td className={`px-4 py-3 text-right font-semibold ${mov.tipo === "INGRESO" ? "text-green-700" : "text-red-700"}`}>
-                      {mov.tipo === "EGRESO" ? "-" : ""}
+                    <td className={`px-4 py-3 text-right font-semibold ${
+                      mov.tipo === "INGRESO" || mov.tipo === "ABONO" ? "text-green-700" : "text-red-700"
+                    }`}>
+                      {mov.tipo === "EGRESO" || mov.tipo === "CARGO" ? "-" : ""}
                       {formatCLP(Number(mov.monto))}
                     </td>
                   </tr>

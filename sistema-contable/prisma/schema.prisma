@@ -8,22 +8,51 @@ datasource db {
 }
 
 // ============================================================================
+// CATEGORÍAS DE SOCIOS (Activo 100%, Vitalicio C 60%, Activo prepago 88%, etc.)
+// ============================================================================
+
+model Categoria {
+  id              Int     @id @default(autoincrement())
+  nombre          String  @unique
+  porcentajeCuota Decimal @default(100) @db.Decimal(5, 2) @map("porcentaje_cuota")
+  activo          Boolean @default(true)
+
+  socios Socio[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([activo])
+  @@map("categorias")
+}
+
+// ============================================================================
 // SOCIOS
 // ============================================================================
 
 model Socio {
   id             Int         @id @default(autoincrement())
   nombre         String
-  apellido       String?
+  apPaterno      String?     @map("ap_paterno")
+  apMaterno      String?     @map("ap_materno")
   nombreCompleto String      @map("nombre_completo")
+  rut            String?     @unique
   email          String?     @unique
   telefono       String?
-  rut            String?     @unique
-  estado         EstadoSocio @default(ACTIVO)
+  direccion      String?
+  fechaNacimiento DateTime?  @map("fecha_nacimiento")
   fechaIngreso   DateTime    @default(now()) @map("fecha_ingreso")
+  acta           String?
+  fechaExSocio   DateTime?   @map("fecha_ex_socio")
   notas          String?     @db.Text
+  estado         EstadoSocio @default(ACTIVO)
+
+  categoriaId Int?       @map("categoria_id")
+  categoria   Categoria? @relation(fields: [categoriaId], references: [id])
 
   movimientos Movimiento[]
+  credencial  Credencial?
+  reservas    Reserva[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
@@ -31,14 +60,73 @@ model Socio {
   @@index([nombreCompleto])
   @@index([email])
   @@index([estado])
+  @@index([categoriaId])
   @@map("socios")
 }
 
 enum EstadoSocio {
   ACTIVO
-  INACTIVO
-  SUSPENDIDO
-  MOROSO
+  HONORARIO
+  CONGELADO
+  COOPERADOR
+  RENUNCIADO
+  ELIMINADO
+  FALLECIDO
+}
+
+// ============================================================================
+// CREDENCIAL DIGITAL DEL CLUB
+// ============================================================================
+
+model Credencial {
+  id           Int      @id @default(autoincrement())
+  socioId      Int      @unique @map("socio_id")
+  socio        Socio    @relation(fields: [socioId], references: [id])
+  codigo       String   @unique // Ej: "CAA-2026-00042"
+  anioVigencia Int      @map("anio_vigencia")
+  activa       Boolean  @default(true)
+  emitidaEn   DateTime @default(now()) @map("emitida_en")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([codigo])
+  @@index([anioVigencia])
+  @@index([activa])
+  @@map("credenciales")
+}
+
+// ============================================================================
+// RESERVAS DEL REFUGIO
+// ============================================================================
+
+model Reserva {
+  id            Int           @id @default(autoincrement())
+  socioId       Int           @map("socio_id")
+  socio         Socio         @relation(fields: [socioId], references: [id])
+  fechaDesde    DateTime      @map("fecha_desde")
+  fechaHasta    DateTime      @map("fecha_hasta")
+  nPersonas     Int           @default(1) @map("n_personas")
+  comentario    String?       @db.Text
+  estado        EstadoReserva @default(PENDIENTE)
+  motivoRechazo String?       @map("motivo_rechazo") @db.Text
+  revisadoPor   String?       @map("revisado_por")
+  revisadoEn    DateTime?     @map("revisado_en")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([socioId])
+  @@index([estado])
+  @@index([fechaDesde])
+  @@map("reservas")
+}
+
+enum EstadoReserva {
+  PENDIENTE
+  APROBADA
+  RECHAZADA
+  CANCELADA
 }
 
 // ============================================================================
@@ -82,7 +170,7 @@ model Centro {
 }
 
 // ============================================================================
-// MOVIMIENTOS (Ingresos y Egresos)
+// MOVIMIENTOS (Ingresos, Egresos, Cargos y Abonos)
 // ============================================================================
 
 model Movimiento {
@@ -103,6 +191,7 @@ model Movimiento {
   monto          Decimal @db.Decimal(12, 2)
   fecha          DateTime
 
+  // Solo para INGRESO/EGRESO sin socio asignado
   esSinSocio     Boolean @default(false) @map("es_sin_socio")
   motivoSinSocio String? @map("motivo_sin_socio")
 
@@ -125,6 +214,8 @@ model Movimiento {
 enum TipoMovimiento {
   INGRESO
   EGRESO
+  CARGO  // Cargo a cuenta del socio (deuda)
+  ABONO  // Abono a cuenta del socio (pago)
 }
 
 // ============================================================================
@@ -152,6 +243,7 @@ enum RolUsuario {
   ADMIN
   TESORERO
   USUARIO
+  SOCIO // Portal de socios (acceso restringido)
 }
 
 // ============================================================================

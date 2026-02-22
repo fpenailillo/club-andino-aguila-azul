@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { obtenerSocios, buscarSociosQuery, crearSocio } from "@/lib/services/socios";
+import { crearReserva, obtenerReservas } from "@/lib/services/reservas";
 import { handleApiError } from "@/lib/utils";
 
 export async function GET(request: NextRequest) {
@@ -11,25 +11,14 @@ export async function GET(request: NextRequest) {
 
   try {
     const { searchParams } = new URL(request.url);
-    const busqueda = searchParams.get("busqueda") || undefined;
-    const modo = searchParams.get("modo");
-
-    if (modo === "search" && busqueda) {
-      const resultados = await buscarSociosQuery(busqueda);
-      return NextResponse.json(resultados);
-    }
-
-    const estadoParam = searchParams.get("estado");
-    const categoriaIdParam = searchParams.get("categoriaId");
-
-    const resultado = await obtenerSocios({
-      busqueda,
-      estado: estadoParam as Parameters<typeof obtenerSocios>[0]["estado"] ?? undefined,
-      categoriaId: categoriaIdParam ? parseInt(categoriaIdParam) : undefined,
+    const resultado = await obtenerReservas({
+      estado: searchParams.get("estado") as Parameters<typeof obtenerReservas>[0]["estado"] ?? undefined,
+      socioId: searchParams.get("socioId") ? parseInt(searchParams.get("socioId")!) : undefined,
+      desde: searchParams.get("desde") || undefined,
+      hasta: searchParams.get("hasta") || undefined,
       pagina: searchParams.get("pagina") ? parseInt(searchParams.get("pagina")!) : 1,
-      porPagina: searchParams.get("porPagina") ? parseInt(searchParams.get("porPagina")!) : 50,
+      porPagina: searchParams.get("porPagina") ? parseInt(searchParams.get("porPagina")!) : 20,
     });
-
     return NextResponse.json(resultado);
   } catch (error) {
     const { message, status } = handleApiError(error);
@@ -45,8 +34,8 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json();
-    const socio = await crearSocio(body);
-    return NextResponse.json(socio, { status: 201 });
+    const reserva = await crearReserva(body);
+    return NextResponse.json(reserva, { status: 201 });
   } catch (error) {
     const { message, status } = handleApiError(error);
     return NextResponse.json({ error: message }, { status });

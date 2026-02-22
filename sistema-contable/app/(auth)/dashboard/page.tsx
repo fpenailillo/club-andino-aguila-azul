@@ -59,14 +59,17 @@ interface DashboardData {
   resumenSocios: {
     total: number;
     ACTIVO: number;
-    INACTIVO: number;
-    SUSPENDIDO: number;
-    MOROSO: number;
+    HONORARIO: number;
+    CONGELADO: number;
+    COOPERADOR: number;
+    RENUNCIADO: number;
+    ELIMINADO: number;
+    FALLECIDO: number;
   };
   ultimosMovimientos: Array<{
     id: number;
     numeroRegistro: string;
-    tipo: "INGRESO" | "EGRESO";
+    tipo: "INGRESO" | "EGRESO" | "CARGO" | "ABONO";
     fecha: string;
     monto: string | number;
     comentario: string;
@@ -323,10 +326,16 @@ export default function DashboardPage() {
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     <Badge
-                      variant={mov.tipo === "INGRESO" ? "success" : "destructive"}
+                      variant={
+                        mov.tipo === "INGRESO" ? "success" :
+                        mov.tipo === "EGRESO" ? "destructive" :
+                        mov.tipo === "ABONO" ? "secondary" : "warning"
+                      }
                       className="flex-shrink-0 text-xs"
                     >
-                      {mov.tipo === "INGRESO" ? "ING" : "EGR"}
+                      {mov.tipo === "INGRESO" ? "ING" :
+                       mov.tipo === "EGRESO" ? "EGR" :
+                       mov.tipo === "CARGO" ? "CAR" : "ABO"}
                     </Badge>
                     <div className="min-w-0">
                       <p className="text-sm font-medium truncate">
@@ -341,10 +350,10 @@ export default function DashboardPage() {
                   </div>
                   <p
                     className={`text-sm font-semibold flex-shrink-0 ml-2 ${
-                      mov.tipo === "INGRESO" ? "text-green-700" : "text-red-700"
+                      mov.tipo === "INGRESO" || mov.tipo === "ABONO" ? "text-green-700" : "text-red-700"
                     }`}
                   >
-                    {mov.tipo === "EGRESO" ? "-" : ""}
+                    {mov.tipo === "EGRESO" || mov.tipo === "CARGO" ? "-" : ""}
                     {formatCLP(Number(mov.monto))}
                   </p>
                 </div>

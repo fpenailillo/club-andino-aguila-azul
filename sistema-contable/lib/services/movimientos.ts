@@ -4,6 +4,7 @@ import {
   getMotivoSinSocio,
   determinarCentro,
   generarNumeroRegistro,
+  tipoRequiereSocio,
   validarMonto,
   validarFecha,
   validarSocioRequerido,
@@ -16,7 +17,7 @@ import { Prisma } from "@prisma/client";
 // ============================================================================
 
 export const crearMovimientoSchema = z.object({
-  tipo: z.enum(["INGRESO", "EGRESO"]),
+  tipo: z.enum(["INGRESO", "EGRESO", "CARGO", "ABONO"]),
   socioId: z.number().nullable().optional(),
   conceptoId: z.number().int().positive(),
   centroId: z.number().int().positive().optional(),
@@ -29,7 +30,7 @@ export const crearMovimientoSchema = z.object({
 export type CrearMovimientoInput = z.infer<typeof crearMovimientoSchema>;
 
 export const filtrosMovimientosSchema = z.object({
-  tipo: z.enum(["INGRESO", "EGRESO"]).optional(),
+  tipo: z.enum(["INGRESO", "EGRESO", "CARGO", "ABONO"]).optional(),
   socioId: z.number().optional(),
   conceptoId: z.number().optional(),
   centroId: z.number().optional(),
@@ -49,70 +50,55 @@ export type FiltrosMovimientos = z.infer<typeof filtrosMovimientosSchema>;
 // ============================================================================
 
 export async function crearMovimiento(data: CrearMovimientoInput) {
-  // Parsear y validar
   const parsed = crearMovimientoSchema.parse(data);
+  const fecha = typeof parsed.fecha === "string" ? new Date(parsed.fecha) : parsed.fecha;
 
-  const fecha =
-    typeof parsed.fecha === "string" ? new Date(parsed.fecha) : parsed.fecha;
-
-  // Validaciones de negocio
   const validMonto = validarMonto(parsed.monto);
-  if (!validMonto.valido) {
-    throw new Error(validMonto.error);
-  }
+  if (!validMonto.valido) throw new Error(validMonto.error);
 
   const validFecha = validarFecha(fecha);
-  if (!validFecha.valido) {
-    throw new Error(validFecha.error);
+  if (!validFecha.valido) throw new Error(validFecha.error);
+
+  const concepto = await prisma.concepto.findUnique({ where: { id: parsed.conceptoId } });
+  if (!concepto) throw new Error("Concepto no encontrado");
+
+  // CARGO y ABONO siempre requieren socio
+  if (tipoRequiereSocio(parsed.tipo) && !parsed.socioId) {
+    throw new Error(`Los movimientos de tipo ${parsed.tipo} requieren asignar un socio`);
   }
 
-  // Obtener concepto para aplicar reglas
-  const concepto = await prisma.concepto.findUnique({
-    where: { id: parsed.conceptoId },
-  });
-  if (!concepto) {
-    throw new Error("Concepto no encontrado");
-  }
+  // Para INGRESO/EGRESO, aplicar regla de asignación de socios
+  let socioId = parsed.socioId ?? null;
+  let esSinSocio = false;
+  let motivoSinSocio: string | null = null;
 
-  // Aplicar regla de asignación de socios
-  const debeAsignar = debeAsignarSocio(concepto.nombre, parsed.comentario);
-  const validSocio = validarSocioRequerido(
-    parsed.socioId ?? null,
-    concepto.nombre,
-    parsed.comentario
-  );
-  if (!validSocio.valido) {
-    throw new Error(validSocio.error);
-  }
+  if (parsed.tipo === "INGRESO" || parsed.tipo === "EGRESO") {
+    const debeAsignar = debeAsignarSocio(concepto.nombre, parsed.comentario);
+    const validSocio = validarSocioRequerido(parsed.socioId ?? null, concepto.nombre, parsed.comentario);
+    if (!validSocio.valido) throw new Error(validSocio.error);
 
-  const socioId = debeAsignar ? (parsed.socioId ?? null) : null;
-  const esSinSocio = !debeAsignar;
-  const motivoSinSocio = getMotivoSinSocio(concepto.nombre, parsed.comentario);
+    socioId = debeAsignar ? (parsed.socioId ?? null) : null;
+    esSinSocio = !debeAsignar;
+    motivoSinSocio = getMotivoSinSocio(concepto.nombre, parsed.comentario);
+  }
 
   // Determinar centro automáticamente si no se especifica
   let centroId = parsed.centroId;
   if (!centroId) {
     const nombreCentro = determinarCentro(concepto.nombre);
-    const centro = await prisma.centro.findUnique({
-      where: { nombre: nombreCentro },
-    });
+    const centro = await prisma.centro.findUnique({ where: { nombre: nombreCentro } });
     centroId = centro?.id;
   }
-  if (!centroId) {
-    throw new Error("Centro no encontrado");
-  }
+  if (!centroId) throw new Error("Centro no encontrado");
 
   // Generar número de registro (con transacción para evitar race conditions)
-  const movimiento = await prisma.$transaction(async (tx) => {
+  return prisma.$transaction(async (tx) => {
     const contador = await tx.contadorRegistro.update({
       where: { tipo: parsed.tipo },
       data: { ultimo: { increment: 1 } },
     });
 
-    const numeroRegistro = generarNumeroRegistro(
-      parsed.tipo,
-      contador.ultimo
-    );
+    const numeroRegistro = generarNumeroRegistro(parsed.tipo, contador.ultimo);
 
     return tx.movimiento.create({
       data: {
@@ -135,8 +121,6 @@ export async function crearMovimiento(data: CrearMovimientoInput) {
       },
     });
   });
-
-  return movimiento;
 }
 
 export async function obtenerMovimientos(filtros: Partial<FiltrosMovimientos>) {
@@ -175,11 +159,7 @@ export async function obtenerMovimientos(filtros: Partial<FiltrosMovimientos>) {
     where.OR = [
       { numeroRegistro: { contains: busqueda, mode: "insensitive" } },
       { comentario: { contains: busqueda, mode: "insensitive" } },
-      {
-        socio: {
-          nombreCompleto: { contains: busqueda, mode: "insensitive" },
-        },
-      },
+      { socio: { nombreCompleto: { contains: busqueda, mode: "insensitive" } } },
     ];
   }
 
@@ -206,7 +186,6 @@ export async function obtenerMovimientos(filtros: Partial<FiltrosMovimientos>) {
     prisma.movimiento.count({ where }),
   ]);
 
-  // Calcular totales del resultado actual
   const totalesResult = await prisma.movimiento.groupBy({
     by: ["tipo"],
     where,
@@ -217,47 +196,36 @@ export async function obtenerMovimientos(filtros: Partial<FiltrosMovimientos>) {
   const totales = {
     ingresos: 0,
     egresos: 0,
+    cargos: 0,
+    abonos: 0,
     balance: 0,
+    saldoCuenta: 0,
     cantidadIngresos: 0,
     cantidadEgresos: 0,
+    cantidadCargos: 0,
+    cantidadAbonos: 0,
   };
 
   for (const r of totalesResult) {
     const suma = Number(r._sum.monto ?? 0);
-    if (r.tipo === "INGRESO") {
-      totales.ingresos = suma;
-      totales.cantidadIngresos = r._count;
-    } else {
-      totales.egresos = suma;
-      totales.cantidadEgresos = r._count;
-    }
+    if (r.tipo === "INGRESO") { totales.ingresos = suma; totales.cantidadIngresos = r._count; }
+    else if (r.tipo === "EGRESO") { totales.egresos = suma; totales.cantidadEgresos = r._count; }
+    else if (r.tipo === "CARGO") { totales.cargos = suma; totales.cantidadCargos = r._count; }
+    else if (r.tipo === "ABONO") { totales.abonos = suma; totales.cantidadAbonos = r._count; }
   }
-  totales.balance = totales.ingresos - totales.egresos;
 
-  return {
-    movimientos,
-    total,
-    pagina,
-    porPagina,
-    totalPaginas: Math.ceil(total / porPagina),
-    totales,
-  };
+  totales.balance = totales.ingresos - totales.egresos;
+  totales.saldoCuenta = totales.abonos - totales.cargos;
+
+  return { movimientos, total, pagina, porPagina, totalPaginas: Math.ceil(total / porPagina), totales };
 }
 
 export async function obtenerMovimientoPorId(id: number) {
   const movimiento = await prisma.movimiento.findUnique({
     where: { id },
-    include: {
-      socio: true,
-      concepto: true,
-      centro: true,
-    },
+    include: { socio: true, concepto: true, centro: true },
   });
-
-  if (!movimiento) {
-    throw new Error(`Movimiento ${id} no encontrado`);
-  }
-
+  if (!movimiento) throw new Error(`Movimiento ${id} no encontrado`);
   return movimiento;
 }
 
@@ -265,49 +233,35 @@ export async function actualizarMovimiento(
   id: number,
   data: Partial<CrearMovimientoInput> & { modificadoPor?: string }
 ) {
-  const existente = await prisma.movimiento.findUnique({
-    where: { id },
-    include: { concepto: true },
-  });
-  if (!existente) {
-    throw new Error(`Movimiento ${id} no encontrado`);
-  }
+  const existente = await prisma.movimiento.findUnique({ where: { id } });
+  if (!existente) throw new Error(`Movimiento ${id} no encontrado`);
 
   const updateData: Prisma.MovimientoUpdateInput = {};
 
   if (data.comentario !== undefined) updateData.comentario = data.comentario;
   if (data.monto !== undefined) {
-    const validMonto = validarMonto(data.monto);
-    if (!validMonto.valido) throw new Error(validMonto.error);
+    const v = validarMonto(data.monto);
+    if (!v.valido) throw new Error(v.error);
     updateData.monto = new Prisma.Decimal(data.monto);
   }
   if (data.fecha !== undefined) {
-    const fecha =
-      typeof data.fecha === "string" ? new Date(data.fecha) : data.fecha;
-    const validFecha = validarFecha(fecha);
-    if (!validFecha.valido) throw new Error(validFecha.error);
+    const fecha = typeof data.fecha === "string" ? new Date(data.fecha) : data.fecha;
+    const v = validarFecha(fecha);
+    if (!v.valido) throw new Error(v.error);
     updateData.fecha = fecha;
   }
-
   if (data.modificadoPor) updateData.modificadoPor = data.modificadoPor;
 
   return prisma.movimiento.update({
     where: { id },
     data: updateData,
-    include: {
-      socio: true,
-      concepto: true,
-      centro: true,
-    },
+    include: { socio: true, concepto: true, centro: true },
   });
 }
 
 export async function eliminarMovimiento(id: number) {
   const existente = await prisma.movimiento.findUnique({ where: { id } });
-  if (!existente) {
-    throw new Error(`Movimiento ${id} no encontrado`);
-  }
-
+  if (!existente) throw new Error(`Movimiento ${id} no encontrado`);
   return prisma.movimiento.delete({ where: { id } });
 }
 
@@ -323,7 +277,7 @@ export async function obtenerEstadisticasMes(anio?: number, mes?: number) {
   const inicio = new Date(anioActual, mesActual - 1, 1);
   const fin = new Date(anioActual, mesActual, 0, 23, 59, 59, 999);
 
-  const [ingresos, egresos] = await Promise.all([
+  const [ingresos, egresos, cargos, abonos] = await Promise.all([
     prisma.movimiento.aggregate({
       where: { tipo: "INGRESO", fecha: { gte: inicio, lte: fin } },
       _sum: { monto: true },
@@ -334,17 +288,34 @@ export async function obtenerEstadisticasMes(anio?: number, mes?: number) {
       _sum: { monto: true },
       _count: true,
     }),
+    prisma.movimiento.aggregate({
+      where: { tipo: "CARGO", fecha: { gte: inicio, lte: fin } },
+      _sum: { monto: true },
+      _count: true,
+    }),
+    prisma.movimiento.aggregate({
+      where: { tipo: "ABONO", fecha: { gte: inicio, lte: fin } },
+      _sum: { monto: true },
+      _count: true,
+    }),
   ]);
 
   const totalIngresos = Number(ingresos._sum.monto ?? 0);
   const totalEgresos = Number(egresos._sum.monto ?? 0);
+  const totalCargos = Number(cargos._sum.monto ?? 0);
+  const totalAbonos = Number(abonos._sum.monto ?? 0);
 
   return {
     totalIngresos,
     totalEgresos,
+    totalCargos,
+    totalAbonos,
     balance: totalIngresos - totalEgresos,
+    saldoCuenta: totalAbonos - totalCargos,
     cantidadIngresos: ingresos._count,
     cantidadEgresos: egresos._count,
+    cantidadCargos: cargos._count,
+    cantidadAbonos: abonos._count,
     mes: mesActual,
     anio: anioActual,
   };
@@ -381,7 +352,7 @@ export async function obtenerEvolucionMensual(meses = 6) {
   return resultados;
 }
 
-export async function obtenerDistribucionPorConcepto(tipo: "INGRESO" | "EGRESO") {
+export async function obtenerDistribucionPorConcepto(tipo: "INGRESO" | "EGRESO" | "CARGO" | "ABONO") {
   const resultado = await prisma.movimiento.groupBy({
     by: ["conceptoId"],
     where: { tipo },

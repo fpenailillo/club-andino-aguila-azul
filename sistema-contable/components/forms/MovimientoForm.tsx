@@ -62,7 +62,7 @@ type FormValues = z.infer<typeof formSchema>;
 // ============================================================================
 
 interface MovimientoFormProps {
-  tipo: "INGRESO" | "EGRESO";
+  tipo: "INGRESO" | "EGRESO" | "CARGO" | "ABONO";
   onSuccess?: (numeroRegistro: string) => void;
   onCancel?: () => void;
 }
@@ -110,8 +110,10 @@ export function MovimientoForm({ tipo, onSuccess, onCancel }: MovimientoFormProp
 
   useEffect(() => {
     const cargarDatos = async () => {
+      // CARGO/ABONO pueden usar cualquier concepto
+      const tipoConcepto = tipo === "CARGO" || tipo === "ABONO" ? "" : `?tipo=${tipo}`;
       const [conceptosRes, centrosRes] = await Promise.all([
-        fetch(`/api/conceptos?tipo=${tipo}`),
+        fetch(`/api/conceptos${tipoConcepto}`),
         fetch("/api/centros"),
       ]);
       const [conceptosData, centrosData] = await Promise.all([
@@ -206,9 +208,11 @@ export function MovimientoForm({ tipo, onSuccess, onCancel }: MovimientoFormProp
   // ============================================================================
 
   const campSocioDeshabilitado = React.useMemo(() => {
+    // CARGO/ABONO siempre requieren socio — nunca deshabilitar
+    if (tipo === "CARGO" || tipo === "ABONO") return false;
     if (!conceptoActual) return false;
     return !debeAsignarSocio(conceptoActual.nombre, comentarioWatch);
-  }, [conceptoActual, comentarioWatch]);
+  }, [tipo, conceptoActual, comentarioWatch]);
 
   const labelSinSocio = React.useMemo(() => {
     if (!conceptoActual) return null;
