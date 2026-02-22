@@ -1,0 +1,2392 @@
+[
+  {
+    "id_kiwi": 17787,
+    "tipo_doc": "Cargo",
+    "socio": "Nora Flores",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17758,
+    "tipo_doc": "Cargo",
+    "socio": "Diego Araya",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17759,
+    "tipo_doc": "Cargo",
+    "socio": "Marcela Janet",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17760,
+    "tipo_doc": "Cargo",
+    "socio": "Alejandra Matus",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17761,
+    "tipo_doc": "Cargo",
+    "socio": "Rodrigo  Henriquez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17762,
+    "tipo_doc": "Cargo",
+    "socio": "Leslie  Maxwell",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17763,
+    "tipo_doc": "Cargo",
+    "socio": "Pablo  Crisostomo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17764,
+    "tipo_doc": "Cargo",
+    "socio": "Javier  Castellon",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17765,
+    "tipo_doc": "Cargo",
+    "socio": "Raimundo Norambuena",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17757,
+    "tipo_doc": "Cargo",
+    "socio": "Francisco Penailillo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17756,
+    "tipo_doc": "Cargo",
+    "socio": "Carla Pinto",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17748,
+    "tipo_doc": "Cargo",
+    "socio": "Manuel Estrada",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17749,
+    "tipo_doc": "Cargo",
+    "socio": "Gabriel Monardes",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17750,
+    "tipo_doc": "Cargo",
+    "socio": "Carlos Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17751,
+    "tipo_doc": "Cargo",
+    "socio": "Oscar Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17752,
+    "tipo_doc": "Cargo",
+    "socio": "Camila Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17753,
+    "tipo_doc": "Cargo",
+    "socio": "Nicolas Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17754,
+    "tipo_doc": "Cargo",
+    "socio": "Felipe Campuzano",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17755,
+    "tipo_doc": "Cargo",
+    "socio": "Richard Sanchez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17766,
+    "tipo_doc": "Cargo",
+    "socio": "Xiomara  Hernandez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17767,
+    "tipo_doc": "Cargo",
+    "socio": "Camila  San Martin",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17778,
+    "tipo_doc": "Cargo",
+    "socio": "Andres Benapres",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17779,
+    "tipo_doc": "Cargo",
+    "socio": "Jose  Lopez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17780,
+    "tipo_doc": "Cargo",
+    "socio": "Francisco Soto",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17782,
+    "tipo_doc": "Cargo",
+    "socio": "Daniel Caballero",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17783,
+    "tipo_doc": "Cargo",
+    "socio": "Rene Rebolledo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17784,
+    "tipo_doc": "Cargo",
+    "socio": "Katherinne Ojeda",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17785,
+    "tipo_doc": "Cargo",
+    "socio": "Rigoberto Vargas",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17786,
+    "tipo_doc": "Cargo",
+    "socio": "Angelica Guantiante",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17777,
+    "tipo_doc": "Cargo",
+    "socio": "Carlos Becerra",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17776,
+    "tipo_doc": "Cargo",
+    "socio": "Francisco Inostroza",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17768,
+    "tipo_doc": "Cargo",
+    "socio": "Cesar Fortino",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17769,
+    "tipo_doc": "Cargo",
+    "socio": "Marcela Pulgar",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17770,
+    "tipo_doc": "Cargo",
+    "socio": "Daniel Araya",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17771,
+    "tipo_doc": "Cargo",
+    "socio": "Pedro Salazar",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17772,
+    "tipo_doc": "Cargo",
+    "socio": "Belfor  Inostroza",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17773,
+    "tipo_doc": "Cargo",
+    "socio": "Nicole Salcedo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17774,
+    "tipo_doc": "Cargo",
+    "socio": "Kevin Goneaga",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17775,
+    "tipo_doc": "Cargo",
+    "socio": "Patricia Avila",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17747,
+    "tipo_doc": "Cargo",
+    "socio": "Victor Pino",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17727,
+    "tipo_doc": "Cargo",
+    "socio": "Patricia Vargas",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17731,
+    "tipo_doc": "Cargo",
+    "socio": "Isabel  Hernandez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17730,
+    "tipo_doc": "Cargo",
+    "socio": "Jorge Jofre",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17729,
+    "tipo_doc": "Cargo",
+    "socio": "Julia Donoso",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17728,
+    "tipo_doc": "Cargo",
+    "socio": "Osvaldo Villegas",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 5100.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17726,
+    "tipo_doc": "Cargo",
+    "socio": "Leonor Ubilla",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17725,
+    "tipo_doc": "Cargo",
+    "socio": "Emilio Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17724,
+    "tipo_doc": "Cargo",
+    "socio": "Manuel Mena",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17723,
+    "tipo_doc": "Cargo",
+    "socio": "Rodrigo Medina",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17722,
+    "tipo_doc": "Cargo",
+    "socio": "Mauricio Silva",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17721,
+    "tipo_doc": "Cargo",
+    "socio": "Jaime Roca",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17781,
+    "tipo_doc": "Cargo",
+    "socio": "Veronica Espejo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17732,
+    "tipo_doc": "Cargo",
+    "socio": "Lidia Gonzalez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17733,
+    "tipo_doc": "Cargo",
+    "socio": "Ezequiel Perez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17734,
+    "tipo_doc": "Cargo",
+    "socio": "Andres Munoz",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17746,
+    "tipo_doc": "Cargo",
+    "socio": "Ximena Garcia",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17745,
+    "tipo_doc": "Cargo",
+    "socio": "Victor  Jerez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17744,
+    "tipo_doc": "Cargo",
+    "socio": "Marta  Vergara",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17743,
+    "tipo_doc": "Cargo",
+    "socio": "Gerardo  Vergara",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17742,
+    "tipo_doc": "Cargo",
+    "socio": "Ricardo Silva",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17741,
+    "tipo_doc": "Cargo",
+    "socio": "Patricia Ramirez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17740,
+    "tipo_doc": "Cargo",
+    "socio": "Javiera  Miranda",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17739,
+    "tipo_doc": "Cargo",
+    "socio": "Eduardo Mendoza",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17735,
+    "tipo_doc": "Cargo",
+    "socio": "Ivonne Barrera",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17738,
+    "tipo_doc": "Cargo",
+    "socio": "Marcela  Raby",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17737,
+    "tipo_doc": "Cargo",
+    "socio": "Gerald Gatica",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17736,
+    "tipo_doc": "Cargo",
+    "socio": "Cristian Martinez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2024-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 17711,
+    "tipo_doc": "Ingreso",
+    "socio": "Patricia Avila",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-02",
+    "monto": 8500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17710,
+    "tipo_doc": "Ingreso",
+    "socio": "Isabel  Hernandez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-02",
+    "monto": 51000.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17709,
+    "tipo_doc": "Ingreso",
+    "socio": "Jose  Lopez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-02",
+    "monto": 8500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17708,
+    "tipo_doc": "Ingreso",
+    "socio": "Lidia Gonzalez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-02",
+    "monto": 8500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17707,
+    "tipo_doc": "Ingreso",
+    "socio": "Rocio Silva",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-02",
+    "monto": 25500.0,
+    "comentario": "Abono a cuotas"
+  },
+  {
+    "id_kiwi": 17712,
+    "tipo_doc": "Ingreso",
+    "socio": "Francisco Inostroza",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-04",
+    "monto": 8500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17713,
+    "tipo_doc": "Ingreso",
+    "socio": "Javiera  Miranda",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-09",
+    "monto": 8500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17714,
+    "tipo_doc": "Ingreso",
+    "socio": "Alejandra Matus",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-09",
+    "monto": 17000.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 18170,
+    "tipo_doc": "Egreso",
+    "socio": "",
+    "concepto": "Otros",
+    "centro": "Sede",
+    "fecha": "2024-01-12",
+    "monto": 187153.0,
+    "comentario": "Arriendo Auto evento conmemoración Ximena Moreno"
+  },
+  {
+    "id_kiwi": 17715,
+    "tipo_doc": "Ingreso",
+    "socio": "Rodrigo Medina",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-18",
+    "monto": 8500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17716,
+    "tipo_doc": "Ingreso",
+    "socio": "Pablo  Crisostomo",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-19",
+    "monto": 25500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17717,
+    "tipo_doc": "Ingreso",
+    "socio": "Gerald Gatica",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-23",
+    "monto": 20000.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17718,
+    "tipo_doc": "Ingreso",
+    "socio": "Francisco Penailillo",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-26",
+    "monto": 102000.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 17719,
+    "tipo_doc": "Ingreso",
+    "socio": "Felipe Campuzano",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-29",
+    "monto": 8500.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 18172,
+    "tipo_doc": "Egreso",
+    "socio": "",
+    "concepto": "Luz",
+    "centro": "Refugio",
+    "fecha": "2024-01-31",
+    "monto": 2121.0,
+    "comentario": "Luz enero"
+  },
+  {
+    "id_kiwi": 18171,
+    "tipo_doc": "Egreso",
+    "socio": "",
+    "concepto": "Agua",
+    "centro": "Sede",
+    "fecha": "2024-01-31",
+    "monto": 4390.0,
+    "comentario": "Agua sede enero"
+  },
+  {
+    "id_kiwi": 17720,
+    "tipo_doc": "Ingreso",
+    "socio": "Nicolas Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2024-01-31",
+    "monto": 30000.0,
+    "comentario": "Abono cuota social"
+  },
+  {
+    "id_kiwi": 18173,
+    "tipo_doc": "Egreso",
+    "socio": "",
+    "concepto": "Luz",
+    "centro": "Sede",
+    "fecha": "2024-01-31",
+    "monto": 2525.0,
+    "comentario": "Luz sede"
+  },
+  {
+    "id_kiwi": 18979,
+    "tipo_doc": "Cargo",
+    "socio": "Robert Young",
+    "concepto": "",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 18914,
+    "tipo_doc": "Cargo",
+    "socio": "Carlos Becerra",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18913,
+    "tipo_doc": "Cargo",
+    "socio": "Francisco Inostroza",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18912,
+    "tipo_doc": "Cargo",
+    "socio": "Patricia Avila",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18911,
+    "tipo_doc": "Cargo",
+    "socio": "Kevin Goneaga",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18910,
+    "tipo_doc": "Cargo",
+    "socio": "Nicole Salcedo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18909,
+    "tipo_doc": "Cargo",
+    "socio": "Pedro Salazar",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18908,
+    "tipo_doc": "Cargo",
+    "socio": "Marcela Pulgar",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18907,
+    "tipo_doc": "Cargo",
+    "socio": "Cesar Fortino",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18906,
+    "tipo_doc": "Cargo",
+    "socio": "Camila  San Martin",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18905,
+    "tipo_doc": "Cargo",
+    "socio": "Xiomara  Hernandez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18904,
+    "tipo_doc": "Cargo",
+    "socio": "Raimundo Norambuena",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18903,
+    "tipo_doc": "Cargo",
+    "socio": "Javier  Castellon",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18902,
+    "tipo_doc": "Cargo",
+    "socio": "Pablo  Crisostomo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18915,
+    "tipo_doc": "Cargo",
+    "socio": "Andres Benapres",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18916,
+    "tipo_doc": "Cargo",
+    "socio": "Jose  Lopez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18917,
+    "tipo_doc": "Cargo",
+    "socio": "Veronica Espejo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18995,
+    "tipo_doc": "Cargo",
+    "socio": "Karina Francisca  Lobos",
+    "concepto": "",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 18960,
+    "tipo_doc": "Cargo",
+    "socio": "Karla Andrea  Méndez",
+    "concepto": "",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 18954,
+    "tipo_doc": "Cargo",
+    "socio": "Jorge González",
+    "concepto": "",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 18949,
+    "tipo_doc": "Cargo",
+    "socio": "Jocelyn Eugenia  Piña",
+    "concepto": "",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 18944,
+    "tipo_doc": "Cargo",
+    "socio": "Manuel Alejandro  Camilo Pérez",
+    "concepto": "",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 18939,
+    "tipo_doc": "Cargo",
+    "socio": "María Magdalena  San Martin",
+    "concepto": "",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 18924,
+    "tipo_doc": "Cargo",
+    "socio": "Pamela Constanza  Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18923,
+    "tipo_doc": "Cargo",
+    "socio": "Elizabeth Saez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18922,
+    "tipo_doc": "Cargo",
+    "socio": "Nora Flores",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18921,
+    "tipo_doc": "Cargo",
+    "socio": "Angelica Guantiante",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18920,
+    "tipo_doc": "Cargo",
+    "socio": "Rigoberto Vargas",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18919,
+    "tipo_doc": "Cargo",
+    "socio": "Katherinne Ojeda",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18918,
+    "tipo_doc": "Cargo",
+    "socio": "Rene Rebolledo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18901,
+    "tipo_doc": "Cargo",
+    "socio": "Leslie  Maxwell",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18900,
+    "tipo_doc": "Cargo",
+    "socio": "Rodrigo  Henriquez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18869,
+    "tipo_doc": "Cargo",
+    "socio": "Mauricio Silva",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18882,
+    "tipo_doc": "Cargo",
+    "socio": "Marcela  Raby",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18881,
+    "tipo_doc": "Cargo",
+    "socio": "Gerald Gatica",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18880,
+    "tipo_doc": "Cargo",
+    "socio": "Cristian Martinez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18879,
+    "tipo_doc": "Cargo",
+    "socio": "Ivonne Barrera",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18878,
+    "tipo_doc": "Cargo",
+    "socio": "Andres Munoz",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18877,
+    "tipo_doc": "Cargo",
+    "socio": "Ezequiel Perez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18876,
+    "tipo_doc": "Cargo",
+    "socio": "Lidia Gonzalez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18875,
+    "tipo_doc": "Cargo",
+    "socio": "Jorge Jofre",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18874,
+    "tipo_doc": "Cargo",
+    "socio": "Julia Donoso",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18873,
+    "tipo_doc": "Cargo",
+    "socio": "Leonor Ubilla",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18872,
+    "tipo_doc": "Cargo",
+    "socio": "Emilio Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18871,
+    "tipo_doc": "Cargo",
+    "socio": "Manuel Mena",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18870,
+    "tipo_doc": "Cargo",
+    "socio": "Rodrigo Medina",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18883,
+    "tipo_doc": "Cargo",
+    "socio": "Eduardo Mendoza",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18884,
+    "tipo_doc": "Cargo",
+    "socio": "Patricia Ramirez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18885,
+    "tipo_doc": "Cargo",
+    "socio": "Ricardo Silva",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18899,
+    "tipo_doc": "Cargo",
+    "socio": "Alejandra Matus",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18898,
+    "tipo_doc": "Cargo",
+    "socio": "Francisco Penailillo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18897,
+    "tipo_doc": "Cargo",
+    "socio": "Carla Pinto",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18896,
+    "tipo_doc": "Cargo",
+    "socio": "Richard Sanchez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18895,
+    "tipo_doc": "Cargo",
+    "socio": "Felipe Campuzano",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18894,
+    "tipo_doc": "Cargo",
+    "socio": "Nicolas Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18893,
+    "tipo_doc": "Cargo",
+    "socio": "Camila Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18892,
+    "tipo_doc": "Cargo",
+    "socio": "Oscar Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18886,
+    "tipo_doc": "Cargo",
+    "socio": "Gerardo  Vergara",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18887,
+    "tipo_doc": "Cargo",
+    "socio": "Marta  Vergara",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18888,
+    "tipo_doc": "Cargo",
+    "socio": "Victor  Jerez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18889,
+    "tipo_doc": "Cargo",
+    "socio": "Ximena Garcia",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18890,
+    "tipo_doc": "Cargo",
+    "socio": "Victor Pino",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18891,
+    "tipo_doc": "Cargo",
+    "socio": "Carlos Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2025-01-01",
+    "monto": 8500.0,
+    "comentario": "Cuota social enero"
+  },
+  {
+    "id_kiwi": 18969,
+    "tipo_doc": "Ingreso",
+    "socio": "Jose  Lopez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-02",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18970,
+    "tipo_doc": "Ingreso",
+    "socio": "Ricardo Silva",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-02",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18968,
+    "tipo_doc": "Ingreso",
+    "socio": "Lidia Gonzalez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-02",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18974,
+    "tipo_doc": "Ingreso",
+    "socio": "Katherinne Ojeda",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-06",
+    "monto": 19500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18973,
+    "tipo_doc": "Ingreso",
+    "socio": "Emilio Nilo",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-06",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18972,
+    "tipo_doc": "Ingreso",
+    "socio": "Rodrigo Medina",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-06",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18971,
+    "tipo_doc": "Ingreso",
+    "socio": "Patricia Avila",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-06",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18975,
+    "tipo_doc": "Ingreso",
+    "socio": "Francisco Inostroza",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-09",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18976,
+    "tipo_doc": "Ingreso",
+    "socio": "Robert Young",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-16",
+    "monto": 27000.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18980,
+    "tipo_doc": "Ingreso",
+    "socio": "Ximena Garcia",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-22",
+    "monto": 50000.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18983,
+    "tipo_doc": "Ingreso",
+    "socio": "Patricia Avila",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-27",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18982,
+    "tipo_doc": "Ingreso",
+    "socio": "Nicolas Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-27",
+    "monto": 30000.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18981,
+    "tipo_doc": "Ingreso",
+    "socio": "",
+    "concepto": "Estadia en Refugio",
+    "centro": "Refugio",
+    "fecha": "2025-01-27",
+    "monto": 15000.0,
+    "comentario": "Richard Sanchez, Refugio"
+  },
+  {
+    "id_kiwi": 18985,
+    "tipo_doc": "Ingreso",
+    "socio": "Ricardo Silva",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-28",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18986,
+    "tipo_doc": "Ingreso",
+    "socio": "Felipe Campuzano",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-28",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18984,
+    "tipo_doc": "Ingreso",
+    "socio": "Camila  San Martin",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-28",
+    "monto": 50000.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18987,
+    "tipo_doc": "Ingreso",
+    "socio": "Ricardo Silva",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-29",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18988,
+    "tipo_doc": "Ingreso",
+    "socio": "Raimundo Norambuena",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-29",
+    "monto": 8500.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 18989,
+    "tipo_doc": "Ingreso",
+    "socio": "Julia Donoso",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2025-01-31",
+    "monto": 20000.0,
+    "comentario": "Abono cuotas"
+  },
+  {
+    "id_kiwi": 20234,
+    "tipo_doc": "Cargo",
+    "socio": "Alfredo  Ferran",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20213,
+    "tipo_doc": "Cargo",
+    "socio": "Nicole Salcedo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20212,
+    "tipo_doc": "Cargo",
+    "socio": "Pedro Salazar",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20211,
+    "tipo_doc": "Cargo",
+    "socio": "Marcela Pulgar",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20210,
+    "tipo_doc": "Cargo",
+    "socio": "Cesar Fortino",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20209,
+    "tipo_doc": "Cargo",
+    "socio": "Camila  San Martin",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20208,
+    "tipo_doc": "Cargo",
+    "socio": "Xiomara  Hernandez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20207,
+    "tipo_doc": "Cargo",
+    "socio": "Raimundo Norambuena",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20206,
+    "tipo_doc": "Cargo",
+    "socio": "Javier  Castellon",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20205,
+    "tipo_doc": "Cargo",
+    "socio": "Pablo  Crisostomo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20204,
+    "tipo_doc": "Cargo",
+    "socio": "Leslie  Maxwell",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20203,
+    "tipo_doc": "Cargo",
+    "socio": "Rodrigo  Henriquez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20202,
+    "tipo_doc": "Cargo",
+    "socio": "Claudia Villa",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20201,
+    "tipo_doc": "Cargo",
+    "socio": "Alejandra Matus",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20200,
+    "tipo_doc": "Cargo",
+    "socio": "Francisco Penailillo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20199,
+    "tipo_doc": "Cargo",
+    "socio": "Carla Pinto",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20214,
+    "tipo_doc": "Cargo",
+    "socio": "Kevin Goneaga",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20215,
+    "tipo_doc": "Cargo",
+    "socio": "Patricia Avila",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20216,
+    "tipo_doc": "Cargo",
+    "socio": "Francisco Inostroza",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20233,
+    "tipo_doc": "Cargo",
+    "socio": "María Paola  Carrero",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20232,
+    "tipo_doc": "Cargo",
+    "socio": "Karina Francisca  Lobos",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20231,
+    "tipo_doc": "Cargo",
+    "socio": "Robert Young",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20230,
+    "tipo_doc": "Cargo",
+    "socio": "Karla Andrea  Méndez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20229,
+    "tipo_doc": "Cargo",
+    "socio": "Jorge González",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20228,
+    "tipo_doc": "Cargo",
+    "socio": "Jocelyn Eugenia  Piña",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20227,
+    "tipo_doc": "Cargo",
+    "socio": "Manuel Alejandro  Camilo Pérez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20226,
+    "tipo_doc": "Cargo",
+    "socio": "María Magdalena  San Martin",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20224,
+    "tipo_doc": "Cargo",
+    "socio": "Elizabeth Saez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20223,
+    "tipo_doc": "Cargo",
+    "socio": "Nora Flores",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20222,
+    "tipo_doc": "Cargo",
+    "socio": "Angelica Guantiante",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20221,
+    "tipo_doc": "Cargo",
+    "socio": "Rigoberto Vargas",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20219,
+    "tipo_doc": "Cargo",
+    "socio": "Rene Rebolledo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20218,
+    "tipo_doc": "Cargo",
+    "socio": "Veronica Espejo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20217,
+    "tipo_doc": "Cargo",
+    "socio": "Carlos Becerra",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20198,
+    "tipo_doc": "Cargo",
+    "socio": "Richard Sanchez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20197,
+    "tipo_doc": "Cargo",
+    "socio": "Felipe Campuzano",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20196,
+    "tipo_doc": "Cargo",
+    "socio": "Nicolas Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20182,
+    "tipo_doc": "Cargo",
+    "socio": "Andres Munoz",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20181,
+    "tipo_doc": "Cargo",
+    "socio": "Ezequiel Perez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20179,
+    "tipo_doc": "Cargo",
+    "socio": "Jorge Jofre",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20178,
+    "tipo_doc": "Cargo",
+    "socio": "Julia Donoso",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20177,
+    "tipo_doc": "Cargo",
+    "socio": "Leonor Ubilla",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20176,
+    "tipo_doc": "Cargo",
+    "socio": "Emilio Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20175,
+    "tipo_doc": "Cargo",
+    "socio": "Manuel Mena",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20174,
+    "tipo_doc": "Cargo",
+    "socio": "Rodrigo Medina",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20173,
+    "tipo_doc": "Cargo",
+    "socio": "Mauricio Silva",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20225,
+    "tipo_doc": "Cargo",
+    "socio": "Pamela Constanza  Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20183,
+    "tipo_doc": "Cargo",
+    "socio": "Ivonne Barrera",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20184,
+    "tipo_doc": "Cargo",
+    "socio": "Cristian Martinez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20185,
+    "tipo_doc": "Cargo",
+    "socio": "Gerald Gatica",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20195,
+    "tipo_doc": "Cargo",
+    "socio": "Camila Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20180,
+    "tipo_doc": "Cargo",
+    "socio": "Lidia Gonzalez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20194,
+    "tipo_doc": "Cargo",
+    "socio": "Oscar Carrasco",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20193,
+    "tipo_doc": "Cargo",
+    "socio": "Carlos Nilo",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20192,
+    "tipo_doc": "Cargo",
+    "socio": "Victor Pino",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20191,
+    "tipo_doc": "Cargo",
+    "socio": "Ximena Garcia",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20190,
+    "tipo_doc": "Cargo",
+    "socio": "Victor  Jerez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20189,
+    "tipo_doc": "Cargo",
+    "socio": "Marta  Vergara",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20188,
+    "tipo_doc": "Cargo",
+    "socio": "Gerardo  Vergara",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20187,
+    "tipo_doc": "Cargo",
+    "socio": "Ricardo Silva",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20186,
+    "tipo_doc": "Cargo",
+    "socio": "Patricia Ramirez",
+    "concepto": "Cuota Social",
+    "centro": "",
+    "fecha": "2026-01-01",
+    "monto": 9000.0,
+    "comentario": "Cuota social Enero"
+  },
+  {
+    "id_kiwi": 20155,
+    "tipo_doc": "Ingreso",
+    "socio": "María Magdalena  San Martin",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-02",
+    "monto": 9000.0,
+    "comentario": "María Magdalena San Martin, Cuotas"
+  },
+  {
+    "id_kiwi": 20156,
+    "tipo_doc": "Ingreso",
+    "socio": "Elizabeth Saez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-05",
+    "monto": 100000.0,
+    "comentario": "Elizabeth Saez, Cuotas"
+  },
+  {
+    "id_kiwi": 20157,
+    "tipo_doc": "Ingreso",
+    "socio": "Cristian Martinez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-05",
+    "monto": 150000.0,
+    "comentario": "Martinez, Cuotas"
+  },
+  {
+    "id_kiwi": 20158,
+    "tipo_doc": "Ingreso",
+    "socio": "Emilio Nilo",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-05",
+    "monto": 9000.0,
+    "comentario": "Emilio Nilo, Cuotas"
+  },
+  {
+    "id_kiwi": 20159,
+    "tipo_doc": "Ingreso",
+    "socio": "Rodrigo Medina",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-05",
+    "monto": 9000.0,
+    "comentario": "Rodrigo Medina, Cuotas"
+  },
+  {
+    "id_kiwi": 20160,
+    "tipo_doc": "Ingreso",
+    "socio": "Francisco Inostroza",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-06",
+    "monto": 9000.0,
+    "comentario": "Francisco Inostroza, Cuotas"
+  },
+  {
+    "id_kiwi": 20161,
+    "tipo_doc": "Ingreso",
+    "socio": "Pamela Constanza  Nilo",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-07",
+    "monto": 8500.0,
+    "comentario": "Pamela Constanza Nilo, Cuotas"
+  },
+  {
+    "id_kiwi": 20162,
+    "tipo_doc": "Ingreso",
+    "socio": "Victor  Jerez",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-09",
+    "monto": 15000.0,
+    "comentario": "Victor Jerez, Cuotas"
+  },
+  {
+    "id_kiwi": 20163,
+    "tipo_doc": "Ingreso",
+    "socio": "Raimundo Norambuena",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-09",
+    "monto": 10000.0,
+    "comentario": "Raimundo Norambuena, Cuotas"
+  },
+  {
+    "id_kiwi": 20164,
+    "tipo_doc": "Ingreso",
+    "socio": "Claudia Villa",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-12",
+    "monto": 30000.0,
+    "comentario": "Claudia Villa, Cuotas"
+  },
+  {
+    "id_kiwi": 20165,
+    "tipo_doc": "Ingreso",
+    "socio": "Felipe Campuzano",
+    "concepto": "Cuota Social",
+    "centro": "Sede",
+    "fecha": "2026-01-28",
+    "monto": 8500.0,
+    "comentario": "Felipe Campuzano, Cuotas"
+  }
+]
