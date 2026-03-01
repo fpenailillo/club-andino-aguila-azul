@@ -14,7 +14,8 @@
     "db:seed": "npx tsx prisma/seed.ts",
     "db:studio": "prisma studio",
     "db:push": "prisma db push",
-    "db:migrate-kiwi": "tsx prisma/migrate-from-kiwi.ts"
+    "db:migrate-kiwi": "tsx prisma/migrate-from-kiwi.ts",
+    "db:create-socio-users": "tsx prisma/create-socio-users.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -34,6 +35,7 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.1",
     "recharts": "^2.14.1",
+    "resend": "^6.9.3",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "xlsx": "^0.18.5",

@@ -54,6 +54,10 @@ model Socio {
   credencial  Credencial?
   reservas    Reserva[]
 
+  // Vinculación con usuario del portal (magic link)
+  usuarioId Int?     @unique @map("usuario_id")
+  usuario   Usuario? @relation(fields: [usuarioId], references: [id])
+
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
@@ -230,6 +234,9 @@ model Usuario {
   rol          RolUsuario @default(USUARIO)
   activo       Boolean    @default(true)
 
+  // Relación inversa con socio del portal
+  socio Socio?
+
   createdAt DateTime  @default(now()) @map("created_at")
   updatedAt DateTime  @updatedAt @map("updated_at")
   lastLogin DateTime? @map("last_login")
@@ -258,4 +265,45 @@ model ContadorRegistro {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("contadores_registro")
+}
+
+// ============================================================================
+// MAGIC LINK TOKENS (autenticación del portal del socio)
+// ============================================================================
+
+model MagicLinkToken {
+  id        Int       @id @default(autoincrement())
+  token     String    @unique
+  email     String
+  expiresAt DateTime  @map("expires_at")
+  usedAt    DateTime? @map("used_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([token])
+  @@index([email])
+  @@map("magic_link_tokens")
+}
+
+// ============================================================================
+// AUDIT LOG (trazabilidad de acciones del sistema)
+// ============================================================================
+
+model AuditLog {
+  id            Int      @id @default(autoincrement())
+  accion        String
+  entidad       String
+  entidadId     Int?     @map("entidad_id")
+  detalle       String?  @db.Text // JSON con los cambios (antes/después)
+
+  usuarioId     Int?     @map("usuario_id")
+  usuarioNombre String   @map("usuario_nombre")
+  ip            String?
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([entidad, entidadId])
+  @@index([usuarioId])
+  @@index([createdAt])
+  @@map("audit_logs")
 }

@@ -18,8 +18,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
     }),
 
-    // Credentials (email + contraseña)
+    // Credentials (email + contraseña) — para ADMIN, TESORERO, USUARIO
     Credentials({
+      id: "credentials",
       name: "credentials",
       credentials: {
         email: { label: "Email", type: "email" },
@@ -33,6 +34,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         const usuario = await prisma.usuario.findUnique({ where: { email } });
         if (!usuario || !usuario.activo) return null;
+
+        // Socios usan magic link, no contraseña
+        if (usuario.rol === "SOCIO") return null;
 
         const passwordValido = await bcrypt.compare(password, usuario.passwordHash);
         if (!passwordValido) return null;
@@ -50,11 +54,54 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         };
       },
     }),
+
+    // Magic Link — para SOCIO (portal del socio)
+    Credentials({
+      id: "magic-link",
+      name: "magic-link",
+      credentials: {
+        token: { type: "text" },
+      },
+      async authorize(credentials) {
+        if (!credentials?.token) return null;
+
+        const tokenRecord = await prisma.magicLinkToken.findUnique({
+          where: { token: credentials.token as string },
+        });
+
+        if (!tokenRecord) return null;
+        if (tokenRecord.usedAt) return null;
+        if (tokenRecord.expiresAt < new Date()) return null;
+
+        // Marcar como usado (single-use)
+        await prisma.magicLinkToken.update({
+          where: { id: tokenRecord.id },
+          data: { usedAt: new Date() },
+        });
+
+        const usuario = await prisma.usuario.findUnique({
+          where: { email: tokenRecord.email },
+        });
+
+        if (!usuario || !usuario.activo || usuario.rol !== "SOCIO") return null;
+
+        await prisma.usuario.update({
+          where: { id: usuario.id },
+          data: { lastLogin: new Date() },
+        });
+
+        return {
+          id: usuario.id.toString(),
+          email: usuario.email,
+          name: usuario.nombre,
+          role: usuario.rol,
+        };
+      },
+    }),
   ],
 
   callbacks: {
-    // Controla quién puede entrar con Google OAuth:
-    // solo emails que existan en la tabla `usuario` y estén activos.
+    // Google OAuth: solo emails registrados en la BD (no socios)
     async signIn({ user, account }) {
       if (account?.provider === "google") {
         if (!user.email) return false;
@@ -63,18 +110,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           where: { email: user.email },
         });
 
-        if (!usuario || !usuario.activo) {
-          // Email no autorizado — rechazar login
+        if (!usuario || !usuario.activo || usuario.rol === "SOCIO") {
           return false;
         }
 
-        // Actualizar lastLogin
         await prisma.usuario.update({
           where: { id: usuario.id },
           data: { lastLogin: new Date() },
         });
 
-        // Inyectar rol y nombre desde BD para el token
         user.name = usuario.nombre;
         (user as { role?: string }).role = usuario.rol;
       }
@@ -84,14 +128,26 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async jwt({ token, user, account }) {
       if (user) {
         token.role = (user as { role?: string }).role ?? "USUARIO";
+        token.sub = user.id;
       }
-      // Para Google OAuth: en el primer sign-in, rellenar rol desde BD
+
+      // Para Google OAuth: obtener rol desde BD
       if (account?.provider === "google" && token.email && !token.role) {
         const usuario = await prisma.usuario.findUnique({
           where: { email: token.email },
         });
         token.role = usuario?.rol ?? "USUARIO";
       }
+
+      // Para SOCIO: inyectar socioId en el token
+      if (token.role === "SOCIO" && token.sub && !token.socioId) {
+        const socio = await prisma.socio.findFirst({
+          where: { usuarioId: parseInt(token.sub as string) },
+          select: { id: true },
+        });
+        token.socioId = socio?.id;
+      }
+
       return token;
     },
 
@@ -99,6 +155,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (token) {
         session.user.id = token.sub ?? "";
         session.user.role = (token.role as string) ?? "USUARIO";
+        if (token.socioId) {
+          session.user.socioId = token.socioId as number;
+        }
       }
       return session;
     },

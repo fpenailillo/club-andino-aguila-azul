@@ -246,7 +246,7 @@ async function main() {
       socioId = socioNombreMap.get(normNombre) ?? null;
       if (!socioId) {
         // Fuzzy search
-        for (const [nombre, id] of socioNombreMap.entries()) {
+        for (const [nombre, id] of Array.from(socioNombreMap.entries())) {
           if (nombre.includes(normNombre) || normNombre.includes(nombre)) {
             socioId = id;
             break;
