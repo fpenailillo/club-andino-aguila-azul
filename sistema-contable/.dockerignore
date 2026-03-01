@@ -1,0 +1,27 @@
+# Dependencias (se reinstalan en el build)
+node_modules
+npm-debug.log*
+
+# Build output (se regenera)
+.next
+out
+
+# Archivos de entorno (nunca en la imagen)
+.env
+.env.*
+!.env.example
+
+# Git
+.git
+.gitignore
+
+# Herramientas de desarrollo
+.eslintcache
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datos de migración sensibles (se sirven desde Secret Manager en prod)
+# prisma/migration-data/

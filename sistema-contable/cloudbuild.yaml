@@ -1,0 +1,78 @@
+# ============================================================================
+# cloudbuild.yaml — CI/CD para Google Cloud Build
+# Club Andino Águila Azul · Sistema Contable
+#
+# Trigger: push a rama 'main' del repositorio
+# Prerequisitos:
+#   - Artifact Registry habilitado en el proyecto GCP
+#   - Secret Manager con los secretos configurados
+#   - Cloud Run y Cloud SQL habilitados
+# ============================================================================
+
+substitutions:
+  _REGION: us-central1
+  _SERVICE_NAME: sistema-contable
+  _REPO: gcr.io/$PROJECT_ID/sistema-contable
+
+steps:
+  # ─── 1. Build de la imagen Docker ─────────────────────────────────────────
+  - name: "gcr.io/cloud-builders/docker"
+    id: build
+    args:
+      - build
+      - --tag
+      - $_REPO:$COMMIT_SHA
+      - --tag
+      - $_REPO:latest
+      - --cache-from
+      - $_REPO:latest
+      - --file
+      - Dockerfile
+      - .
+
+  # ─── 2. Push a Artifact Registry ──────────────────────────────────────────
+  - name: "gcr.io/cloud-builders/docker"
+    id: push
+    waitFor: [build]
+    args:
+      - push
+      - --all-tags
+      - $_REPO
+
+  # ─── 3. Desplegar en Cloud Run ─────────────────────────────────────────────
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    id: deploy
+    waitFor: [push]
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - $_SERVICE_NAME
+      - --image=$_REPO:$COMMIT_SHA
+      - --region=$_REGION
+      - --platform=managed
+      - --allow-unauthenticated
+      # ── Variables de entorno (desde Secret Manager) ──
+      - --set-secrets=DATABASE_URL=DATABASE_URL:latest
+      - --set-secrets=AUTH_SECRET=AUTH_SECRET:latest
+      - --set-secrets=AUTH_GOOGLE_ID=AUTH_GOOGLE_ID:latest
+      - --set-secrets=AUTH_GOOGLE_SECRET=AUTH_GOOGLE_SECRET:latest
+      # ── Variable de URL pública ──
+      - --set-env-vars=AUTH_URL=https://sistema.clubandino.cl
+      - --set-env-vars=NODE_ENV=production
+      # ── Cloud SQL Auth Proxy (conexión segura sin IP pública) ──
+      - --add-cloudsql-instances=$PROJECT_ID:$_REGION:club-andino-db
+      # ── Recursos mínimos para mantener costo bajo ──
+      - --memory=512Mi
+      - --cpu=1
+      - --min-instances=0
+      - --max-instances=3
+      - --concurrency=50
+
+images:
+  - $_REPO:$COMMIT_SHA
+  - $_REPO:latest
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  machineType: E2_HIGHCPU_8

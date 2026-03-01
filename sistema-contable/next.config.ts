@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Server Actions son estables en Next.js 15, no requieren experimental
+  // Genera un build standalone optimizado para Docker/Cloud Run
+  output: "standalone",
 };
 
 export default nextConfig;
